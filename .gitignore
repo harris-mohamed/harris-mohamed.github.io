@@ -8,6 +8,10 @@ __pycache__/
 *.py[cod]
 *$py.class
 
+# Backup files
+*.backup
+*-backup
+
 # OS files
 .DS_Store
 *.Zone.Identifier

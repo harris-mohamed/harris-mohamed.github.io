@@ -1,79 +1,107 @@
 /*!
-    * Start Bootstrap - Freelancer v6.0.5 (https://startbootstrap.com/theme/freelancer)
-    * Copyright 2013-2020 Start Bootstrap
-    * Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-freelancer/blob/master/LICENSE)
-    */
-    (function($) {
-    "use strict"; // Start of use strict
-  
-    // Smooth scrolling using jQuery easing
-    $('a.js-scroll-trigger[href*="#"]:not([href="#"])').click(function() {
-      if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
-        var target = $(this.hash);
-        target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-        if (target.length) {
-          $('html, body').animate({
-            scrollTop: (target.offset().top - 71)
-          }, 1000, "easeInOutExpo");
-          return false;
+ * Start Bootstrap - Freelancer (Bootstrap 5 - Vanilla JS version)
+ * Migrated from jQuery to vanilla JavaScript
+ */
+(function() {
+  "use strict";
+
+  // Smooth scrolling for anchor links
+  document.querySelectorAll('a.js-scroll-trigger[href*="#"]:not([href="#"])').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      const targetId = this.getAttribute('href');
+      if (targetId && targetId.startsWith('#')) {
+        const target = document.querySelector(targetId);
+        if (target) {
+          e.preventDefault();
+
+          // Close navbar collapse on mobile
+          const navbarCollapse = document.querySelector('.navbar-collapse');
+          if (navbarCollapse && navbarCollapse.classList.contains('show')) {
+            const bsCollapse = new bootstrap.Collapse(navbarCollapse, {
+              toggle: false
+            });
+            bsCollapse.hide();
+          }
+
+          // Smooth scroll to target
+          const offset = 71; // Navbar height offset
+          const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - offset;
+
+          window.scrollTo({
+            top: targetPosition,
+            behavior: 'smooth'
+          });
         }
       }
     });
-  
-    // Scroll to top button appear
-    $(document).scroll(function() {
-      var scrollDistance = $(this).scrollTop();
-      if (scrollDistance > 100) {
-        $('.scroll-to-top').fadeIn();
-      } else {
-        $('.scroll-to-top').fadeOut();
-      }
-    });
-  
-    // Closes responsive menu when a scroll trigger link is clicked
-    $('.js-scroll-trigger').click(function() {
-      $('.navbar-collapse').collapse('hide');
-    });
-  
-    // Activate scrollspy to add active class to navbar items on scroll
-    $('body').scrollspy({
-      target: '#mainNav',
-      offset: 80
-    });
-  
-    // Collapse Navbar
-    var navbarCollapse = function() {
-      if ($("#mainNav").offset().top > 100) {
-        $("#mainNav").addClass("navbar-shrink");
-      } else {
-        $("#mainNav").removeClass("navbar-shrink");
-      }
-    };
-    // Collapse now if page is not at top
-    navbarCollapse();
-    // Collapse the navbar when page is scrolled
-    $(window).scroll(navbarCollapse);
-  
-    // Floating label headings for the contact form
-    $(function() {
-      $("body").on("input propertychange", ".floating-label-form-group", function(e) {
-        $(this).toggleClass("floating-label-form-group-with-value", !!$(e.target).val());
-      }).on("focus", ".floating-label-form-group", function() {
-        $(this).addClass("floating-label-form-group-with-focus");
-      }).on("blur", ".floating-label-form-group", function() {
-        $(this).removeClass("floating-label-form-group-with-focus");
-      });
-    });
-   
-    var modals = ["#sentinelPrimeModal", "#sentinelModal", "#hybrisModal", "#riscvModal", "#blenderModal", "#lovelessModal", "#eigenmaskModal", "#cudaModal", "#lc4Modal", "#watchdogModal", "#ldModal", "#hackmeModal", "#ifeModal", "#smarthomeModal", "#ocrModal", "#steveModal", "#shippingModal", "#nvidiaModal", "#kratos1Modal", "#kratos2Modal", "#continentalModal", "#weberModal", "#UAModal"]
-    var i;
-    for (i = 0; i < modals.length; i++){
-      if (window.location.hash == modals[i]) {
-        $(modals[i]).modal('show');
-   }
-    }
-    
-      
-  
-  })(jQuery); // End of use strict
+  });
 
+  // Activate Bootstrap scrollspy
+  const scrollSpy = new bootstrap.ScrollSpy(document.body, {
+    target: '#mainNav',
+    offset: 80
+  });
+
+  // Navbar shrink function
+  function navbarShrink() {
+    const navbarCollapsible = document.querySelector('#mainNav');
+    if (!navbarCollapsible) {
+      return;
+    }
+    if (window.scrollY === 0) {
+      navbarCollapsible.classList.remove('navbar-shrink');
+    } else {
+      navbarCollapsible.classList.add('navbar-shrink');
+    }
+  }
+
+  // Shrink the navbar on initial load
+  navbarShrink();
+
+  // Shrink the navbar when page is scrolled
+  document.addEventListener('scroll', navbarShrink);
+
+  // Handle modal opening from URL hash
+  const modals = [
+    "#sentinelPrimeModal", "#sentinelModal", "#hybrisModal", "#riscvModal",
+    "#blenderModal", "#lovelessModal", "#eigenmaskModal", "#cudaModal",
+    "#lc4Modal", "#watchdogModal", "#ldModal", "#hackmeModal", "#ifeModal",
+    "#smarthomeModal", "#ocrModal", "#steveModal", "#shippingModal",
+    "#nvidiaModal", "#kratos1Modal", "#kratos2Modal", "#continentalModal",
+    "#weberModal", "#UAModal"
+  ];
+
+  // Check if URL hash matches any modal and open it
+  if (window.location.hash && modals.includes(window.location.hash)) {
+    const modalElement = document.querySelector(window.location.hash);
+    if (modalElement) {
+      const modal = new bootstrap.Modal(modalElement);
+      modal.show();
+    }
+  }
+
+  // Floating label form groups (if contact form is enabled)
+  const floatingLabelGroups = document.querySelectorAll('.floating-label-form-group');
+  floatingLabelGroups.forEach(group => {
+    // Handle input/change events
+    group.addEventListener('input', function(e) {
+      const input = e.target;
+      if (input.value && input.value.length > 0) {
+        group.classList.add('floating-label-form-group-with-value');
+      } else {
+        group.classList.remove('floating-label-form-group-with-value');
+      }
+    });
+
+    // Handle focus events
+    group.addEventListener('focus', function() {
+      group.classList.add('floating-label-form-group-with-focus');
+    }, true);
+
+    // Handle blur events
+    group.addEventListener('blur', function() {
+      group.classList.remove('floating-label-form-group-with-focus');
+    }, true);
+  });
+
+})();
