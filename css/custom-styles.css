@@ -272,6 +272,14 @@ html {
   overflow: hidden;
 }
 
+/* Add breathing space between portfolio cards */
+.portfolio .col-md-6,
+.portfolio .col-lg-4 {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  margin-bottom: 4rem;
+}
+
 .portfolio .portfolio-item .portfolio-item-caption {
   position: absolute;
   top: 0;
