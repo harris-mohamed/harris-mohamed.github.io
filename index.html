@@ -14,14 +14,17 @@
         <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
         <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
         <!-- Core theme CSS (includes Bootstrap)-->
-        <link href="css/styles.css" rel="stylesheet" />
+        <!-- Bootstrap 5.2.3 CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+        <!-- Custom theme CSS -->
+        <link href="css/custom-styles.css" rel="stylesheet" />
     </head>
     <body id="page-top">
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
             <div class="container">
                 <a class="navbar-brand js-scroll-trigger" href="#page-top">Harris Mohamed</a>
-                <button class="navbar-toggler navbar-toggler-right text-uppercase font-weight-bold bg-primary text-white rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler navbar-toggler-right text-uppercase font-weight-bold bg-primary text-white rounded" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                     Menu
                     <i class="fas fa-bars"></i>
                 </button>
@@ -42,7 +45,7 @@
         <header class="masthead bg-primary text-white text-center">
             <div class="container d-flex align-items-center flex-column">
                 <!-- Masthead Avatar Image-->
-                <img class="masthead-avatar mb-5 rounded-circle" src="images/headshot.jpg" alt="Harris Mohamed headshot photo" style="object-fit: cover; aspect-ratio: 1/1;" />
+                <img class="masthead-avatar mb-5 rounded-circle object-fit-cover aspect-ratio-square" src="images/headshot.jpg" alt="Harris Mohamed headshot photo" />
                 <!-- Masthead Heading-->
                 <h1 class="masthead-heading text-uppercase mb-0">Harris Mohamed</h1>
                 <!-- Icon Divider-->
@@ -80,7 +83,7 @@
                 
                 </p>
                 <!-- <div class="container"> -->
-                    <div class="align-items-center" style="text-align: center">
+                    <div class="align-items-center text-center">
                         <br>
                         <!-- Footer Social Icons-->
                         <a class="btn btn-outline-light btn-social mx-1" href="mailto:hmoham25@illinois.edu" target="_blank"><i class="fas fa-fw fa-envelope-square"></i></a>
@@ -109,7 +112,7 @@
                 <div class="row justify-content-center">
                     <!-- Portfolio Item 1-->
                     <div class="col-md-6 col-lg-4 mb-5">
-                        <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#amos2025Modal">
+                        <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#amos2025Modal">
                             <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
                                 <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-info"></i></div>
                             </div>
@@ -122,12 +125,12 @@
                         </div>
                         <p class="page-section-subheading text-center  mb-0">AMOS 2025 (Upcoming): Expanding Pattern-of-Life capabilities on Passive RF datasets.</p>
                         <div class="row justify-content-center">
-                            <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#amos2025Modal">Click for details</button>
+                            <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#amos2025Modal">Click for details</button>
                           </div>
                     </div>
                     <!-- Portfolio Item 2-->
                     <div class="col-md-6 col-lg-4 mb-5">
-                        <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#gsaw2025Modal">
+                        <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#gsaw2025Modal">
                             <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
                                 <div class="portfolio-item-caption-content text-center text-white"><br><br>Click for more</div>
                             </div>
@@ -135,12 +138,12 @@
                         </div>
                         <p class="page-section-subheading text-center  mb-0">GSAW 2025: Methods of Detecting Electromagnetic Interference in Passive Radio Frequency Data</p>
                         <div class="row justify-content-center">
-                            <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#gsaw2025Modal">Click for details</button>
+                            <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#gsaw2025Modal">Click for details</button>
                           </div>
                     </div>
                     <!-- Portfolio Item 3-->
                     <div class="col-md-6 col-lg-4 mb-5">
-                        <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#gsaw2024Modal">
+                        <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#gsaw2024Modal">
                             <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
                                 <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-info"></i></div>
                             </div>
@@ -148,12 +151,12 @@
                         </div>
                         <p class="page-section-subheading text-center  mb-0">GSAW 2024: Monitoring Satellite Pattern-of-Life Changes with Passive Radio Frequency Data</p>
                         <div class="row justify-content-center">
-                            <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#gsaw2024Modal">Click for details</button>
+                            <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#gsaw2024Modal">Click for details</button>
                           </div>
                     </div>
                     <!-- Portfolio Item 4-->
                     <div class="col-md-6 col-lg-4 mb-5">
-                        <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#amos2023Modal">
+                        <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#amos2023Modal">
                             <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
                                 <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-info"></i></div>
                             </div>
@@ -166,12 +169,12 @@
                         </div>
                         <p class="page-section-subheading text-center  mb-0">AMOS 2023: Monitoring Satellite Pattern-of-Life Changes with Passive Radio Frequency Data</p>
                         <div class="row justify-content-center">
-                            <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#amos2023Modal">Click for details</button>
+                            <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#amos2023Modal">Click for details</button>
                           </div>
                     </div>
                     <!-- Portfolio Item 5-->
                     <div class="col-md-6 col-lg-4 mb-5">
-                        <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#sentinelPrimeModal">
+                        <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#sentinelPrimeModal">
                             <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
                                 <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-info"></i></div>
                             </div>
@@ -179,12 +182,12 @@
                         </div>
                         <p class="page-section-subheading text-center  mb-0">Sentinel Prime: Real-time LIDAR point cloud FPGA-based 3D classification</p>
                         <div class="row justify-content-center">
-                            <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#sentinelPrimeModal">Click for details</button>
+                            <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#sentinelPrimeModal">Click for details</button>
                           </div>
                     </div>
                     <!-- Portfolio Item 6-->
                     <div class="col-md-6 col-lg-4 mb-5">
-                        <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#sentinelModal">
+                        <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#sentinelModal">
                             <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
                                 <div class="portfolio-item-caption-content text-center text-white"><br><br>Click for more</div>
                             </div>
@@ -192,7 +195,7 @@
                         </div>
                         <p class="page-section-subheading text-center  mb-0">Sentinel: Novel 2D to 3D LIDAR data transformation (2020)</p>
                         <div class="row justify-content-center">
-                            <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#sentinelModal">Click for details</button>
+                            <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#sentinelModal">Click for details</button>
                           </div>
                     </div>
                 </div>
@@ -218,7 +221,7 @@
                 <div class="row justify-content-center">
                 
                     <div class="col-md-6 col-lg-4 mb-5">
-                        <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#vertFarmingModal">
+                        <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#vertFarmingModal">
                             <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
                                 <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i>
                                 </div>
@@ -230,14 +233,14 @@
                         </div>
                         <p class="page-section-subheading text-center text-secondary mb-0">Automated vertical farming</p>
                         <div class="row justify-content-center">
-                            <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#vertFarmingModal">Click for
+                            <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#vertFarmingModal">Click for
                                 details</button>
                         </div>
                     </div>
 
                     <!-- Portfolio Item 1-->
                     <div class="col-md-6 col-lg-4 mb-5">
-                        <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#simpleFarmingModal">
+                        <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#simpleFarmingModal">
                             <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
                                 <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i>
                                 </div>
@@ -249,7 +252,7 @@
                         </div>
                         <p class="page-section-subheading text-center text-secondary mb-0">Basic automated farming implementation</p>
                         <div class="row justify-content-center">
-                            <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#simpleFarmingModal">Click for
+                            <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#simpleFarmingModal">Click for
                                 details</button>
                         </div>
                     </div>
@@ -257,7 +260,7 @@
                     
                     <!-- Portfolio Item 1-->
                     <div class="col-md-6 col-lg-4 mb-5">
-                        <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#hybrisModal">
+                        <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#hybrisModal">
                             <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
                                 <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
                             </div>
@@ -268,13 +271,13 @@
                        </div>
                         <p class="page-section-subheading text-center text-secondary mb-0">Hybris: An experiment in text generation</p>
                             <div class="row justify-content-center">
-                                <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#hybrisModal">Click for details</button>
+                                <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#hybrisModal">Click for details</button>
                             </div>
                     </div>
 
                     <!-- Portfolio Item 1-->
                     <div class="col-md-6 col-lg-4 mb-5">
-                        <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#riscvModal">
+                        <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#riscvModal">
                             <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
                                 <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
                             </div>
@@ -286,12 +289,12 @@
                        </div>
                         <p class="page-section-subheading text-center text-secondary mb-0">Custom implementation of a pipelined RISC-V CPU</p>
                             <div class="row justify-content-center">
-                                <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#riscvModal">Click for details</button>
+                                <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#riscvModal">Click for details</button>
                             </div>
                     </div>
                     <!-- Portfolio Item 2-->
                     <div class="col-md-6 col-lg-4 mb-5">
-                        <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#blenderModal">
+                        <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#blenderModal">
                             <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
                                 <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
                             </div>
@@ -307,13 +310,13 @@
                     </div>
                         <p class="page-section-subheading text-center text-secondary mb-0">Blender</p>
                             <div class="row justify-content-center">
-                                <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#blenderModal">Click for details</button>
+                                <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#blenderModal">Click for details</button>
                             </div>
                     </div>
 
                     <!-- Portfolio Item 2-->
                     <div class="col-md-6 col-lg-4 mb-5">
-                        <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#lovelessModal">
+                        <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#lovelessModal">
                             <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
                                 <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
                             </div>
@@ -325,12 +328,12 @@
                         </div>
                         <p class="page-section-subheading text-center text-secondary mb-0">Project Loveless: An experiment in understanding text messages</p>
                             <div class="row justify-content-center">
-                                <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#lovelessModal">Click for details</button>
+                                <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#lovelessModal">Click for details</button>
                             </div>
                     </div>
                     <!-- Portfolio Item 3-->
                     <div class="col-md-6 col-lg-4 mb-5">
-                        <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#eigenmaskModal">
+                        <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#eigenmaskModal">
                             <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
                                 <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
                             </div>
@@ -342,12 +345,12 @@
                         </div>
                         <p class="page-section-subheading text-center text-secondary mb-0">Eigenmask: A solution to detect if masks are being worn or not</p>
                             <div class="row justify-content-center">
-                                <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#eigenmaskModal">Click for details</button>
+                                <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#eigenmaskModal">Click for details</button>
                             </div>
                     </div>
                     <!-- Portfolio Item 4-->
                     <div class="col-md-6 col-lg-4 mb-5">
-                        <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#cudaModal">
+                        <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#cudaModal">
                             <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
                                 <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
                             </div>
@@ -364,12 +367,12 @@
                         </div>
                         <p class="page-section-subheading text-center text-secondary mb-0">Using CUDA to drastically speed up a simple raytracing algorithm</p>
                             <div class="row justify-content-center">
-                                <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#cudaModal">Click for details</button>
+                                <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#cudaModal">Click for details</button>
                             </div>
                     </div>
                     <!-- Portfolio Item 5-->
                     <div class="col-md-6 col-lg-4 mb-5">
-                        <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#lc4Modal">
+                        <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#lc4Modal">
                             <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
                                 <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
                             </div>
@@ -381,12 +384,12 @@
                         </div>
                         <p class="page-section-subheading text-center text-secondary mb-0">LC-4 OS: Operating System developed from scratch in a small group</p>
                             <div class="row justify-content-center">
-                                <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#lc4Modal">Click for details</button>
+                                <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#lc4Modal">Click for details</button>
                             </div>
                     </div>
                     <!-- Portfolio Item 6-->
                     <div class="col-md-6 col-lg-4">
-                        <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#watchdogModal">
+                        <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#watchdogModal">
                             <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
                                 <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
                             </div>
@@ -398,12 +401,12 @@
                         </div>
                         <p class="page-section-subheading text-center text-secondary mb-0">Project Watchdog: FPGA-based smart home security camera</p>
                             <div class="row justify-content-center">
-                                <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#watchdogModal">Click for details</button>
+                                <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#watchdogModal">Click for details</button>
                             </div>
                     </div>
                     <!-- Portfolio Item 4-->
                     <div class="col-md-6 col-lg-4 mb-5">
-                        <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#ldModal">
+                        <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#ldModal">
                             <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
                                 <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
                             </div>
@@ -415,12 +418,12 @@
                         </div>
                         <p class="page-section-subheading text-center text-secondary mb-0">Project LD: FPGA-based 2D Object Tracker</p>
                             <div class="row justify-content-center">
-                                <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#ldModal">Click for details</button>
+                                <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#ldModal">Click for details</button>
                             </div>
                     </div>
                     <!-- Portfolio Item 5-->
                     <div class="col-md-6 col-lg-4 mb-5">
-                        <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#hackmeModal">
+                        <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#hackmeModal">
                             <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
                                 <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
                             </div>
@@ -432,12 +435,12 @@
                         </div>
                         <p class="page-section-subheading text-center text-secondary mb-0">HackMe: Hackathon-winning proof of concept noninvasive EEG wave capture</p>
                             <div class="row justify-content-center">
-                                <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#hackmeModal">Click for details</button>
+                                <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#hackmeModal">Click for details</button>
                             </div>
                     </div>
                     <!-- Portfolio Item 6-->
                     <div class="col-md-6 col-lg-4">
-                        <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#ifeModal">
+                        <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#ifeModal">
                             <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
                                 <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
                             </div>
@@ -448,12 +451,12 @@
                         </div>
                         <p class="page-section-subheading text-center text-secondary mb-0">DAQA leader for Illini Formula Electric</p>
                             <div class="row justify-content-center">
-                                <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#ifeModal">Click for details</button>
+                                <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#ifeModal">Click for details</button>
                             </div>
                     </div>
                     <!-- Portfolio Item 6-->
                     <div class="col-md-6 col-lg-4">
-                        <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#smarthomeModal">
+                        <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#smarthomeModal">
                             <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
                                 <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
                             </div>
@@ -464,12 +467,12 @@
                         </div>
                         <p class="page-section-subheading text-center text-secondary mb-0">Smart Home</p>
                             <div class="row justify-content-center">
-                                <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#smarthomeModal">Click for details</button>
+                                <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#smarthomeModal">Click for details</button>
                             </div>
                     </div>
                     <!-- Portfolio Item 4-->
                     <div class="col-md-6 col-lg-4 mb-5">
-                        <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#ocrModal">
+                        <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#ocrModal">
                             <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
                                 <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
                             </div>
@@ -480,12 +483,12 @@
                         </div>
                         <p class="page-section-subheading text-center text-secondary mb-0">OCR & Dsylexia</p>
                             <div class="row justify-content-center">
-                                <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#ocrModal">Click for details</button>
+                                <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#ocrModal">Click for details</button>
                             </div>
                     </div>
                     <!-- Portfolio Item 5-->
                     <div class="col-md-6 col-lg-4 mb-5">
-                        <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#steveModal">
+                        <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#steveModal">
                             <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
                                 <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
                             </div>
@@ -496,12 +499,12 @@
                         </div>
                         <p class="page-section-subheading text-center text-secondary mb-0">S.T.E.V.E. - Custom drone built for natural disaster relief</p>
                             <div class="row justify-content-center">
-                                <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#steveModal">Click for details</button>
+                                <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#steveModal">Click for details</button>
                             </div>
                     </div>
                     <!-- Portfolio Item 6-->
                     <div class="col-md-6 col-lg-4">
-                        <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#shippingModal">
+                        <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#shippingModal">
                             <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
                                 <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
                             </div>
@@ -512,7 +515,7 @@
                         </div>
                         <p class="page-section-subheading text-center text-secondary mb-0">Shipping Generator</p>
                             <div class="row justify-content-center">
-                                <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#shippingModal">Click for details</button>
+                                <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#shippingModal">Click for details</button>
                             </div>
                     </div>
                     <!-- Portfolio Item 4-->
@@ -538,7 +541,7 @@
                 <div class="row justify-content-center">
                     <!-- Portfolio Item 1-->
                     <div class="col-md-6 col-lg-4 mb-5">
-                        <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#kratosFullTimeModal">
+                        <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#kratosFullTimeModal">
                             <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
                                 <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
                             </div>
@@ -546,12 +549,12 @@
                         </div>
                         <p class="page-section-subheading text-center mb-0">Kratos Defense and Security Solutions: Space Domain Awareness Software Development Engineer II (2021 - Present)</p>
                             <div class="row justify-content-center">
-                                <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#kratosFullTimeModal">Click for details</button>
+                                <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#kratosFullTimeModal">Click for details</button>
                             </div>
                     </div>
 
                     <div class="col-md-6 col-lg-4 mb-5">
-                        <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#nvidiaModal">
+                        <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#nvidiaModal">
                             <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
                                 <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
                             </div>
@@ -559,12 +562,12 @@
                         </div>
                         <p class="page-section-subheading text-center mb-0">NVIDIA: Computer Architecture Intern (Summer 2021)</p>
                             <div class="row justify-content-center">
-                                <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#nvidiaModal">Click for details</button>
+                                <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#nvidiaModal">Click for details</button>
                             </div>
                     </div>
                     <!-- Portfolio Item 2-->
                     <div class="col-md-6 col-lg-4 mb-5">
-                        <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#kratos1Modal">
+                        <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#kratos1Modal">
                             <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
                                 <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
                             </div>
@@ -572,12 +575,12 @@
                         </div>
                         <p class="page-section-subheading text-center mb-0">Kratos Defense & Security Solutions: System Software Engineering Intern (Summer 2020)</p>
                             <div class="row justify-content-center">
-                                <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#kratos1Modal">Click for details</button>
+                                <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#kratos1Modal">Click for details</button>
                             </div>
                     </div>
                     <!-- Portfolio Item 3-->
                     <div class="col-md-6 col-lg-4 mb-5">
-                        <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#kratos2Modal">
+                        <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#kratos2Modal">
                             <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
                                 <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
                             </div>
@@ -586,12 +589,12 @@
 
                         <p class="page-section-subheading text-center mb-0">Kratos Defense & Security Solutions: System Design/Architecture Engineering Intern (Summer 2019)</p>
                             <div class="row justify-content-center">
-                                <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#kratos2Modal">Click for details</button>
+                                <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#kratos2Modal">Click for details</button>
                             </div>
                     </div>
                     <!-- Portfolio Item 4-->
                     <div class="col-md-6 col-lg-4 mb-5 mb-lg-0">
-                        <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#continentalModal">
+                        <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#continentalModal">
                             <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
                                 <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
                             </div>
@@ -599,12 +602,12 @@
                         </div>
                         <p class="page-section-subheading text-center  mb-0">Continental Automotive: Embedded Software Intern (Summer 2018)</p>
                             <div class="row justify-content-center">
-                                <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#continentalModal">Click for details</button>
+                                <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#continentalModal">Click for details</button>
                             </div>
                     </div>
                     <!-- Portfolio Item 5-->
                     <div class="col-md-6 col-lg-4 mb-5 mb-md-0">
-                        <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#weberModal">
+                        <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#weberModal">
                             <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
                                 <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
                             </div>
@@ -612,7 +615,7 @@
                         </div>
                         <p class="page-section-subheading text-center mb-0">Weber Packaging Solutions: Product Systems Intern (Summer 2017)</p>
                             <div class="row justify-content-center">
-                                <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#weberModal">Click for details</button>
+                                <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#weberModal">Click for details</button>
                             </div>
                     </div>
                 </div>
@@ -634,7 +637,7 @@
                 <div class="row justify-content-center">
                     <!-- Portfolio Item 1-->
                     <div class="col-md-6 col-lg-4 mb-5">
-                        <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#UAModal">
+                        <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#UAModal">
                             <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
                                 <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
                             </div>
@@ -642,7 +645,7 @@
                         </div>
                         <p class="page-section-subheading text-center text-secondary mb-0">ECE 385: Undergraduate Assistant</p>
                             <div class="row justify-content-center">
-                                <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#UAModal">Click for details</button>
+                                <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#UAModal">Click for details</button>
                             </div>
                     </div>
                     
@@ -668,23 +671,23 @@
                     <div class="col-lg-10">
                         <h3 class="text-uppercase mb-4">Graduate Courses</h3>
                         <ul class="mb-5">
-                            <li class="mb-3"><strong class="lead">CS 598: Deep Learning for Healthcare</strong> - <span style="font-size: 0.9rem;">Deep learning fundamentals including CNNs, RNNs, ResNet, Transformers, and Graph Neural Networks. Final project on transfer learning used to classify what activity is being performed based on smartwatch metrics.</span></li>
-                            <li class="mb-3"><strong class="lead">CS 498: Cloud Computing Applications</strong> - <span style="font-size: 0.9rem;">Cloud infrastructure and scaling using AWS EC2s, Hadoop, Spark, and ETL pipelines.</span></li>
-                            <li class="mb-3"><strong class="lead">CS 437: Internet of Things</strong> - <span style="font-size: 0.9rem;">IoT fundamentals from network stacks to common protocols. Learned AWS services including Glue, Greengrass, and Aurora. Final project: automated farming system.</span></li>
-                            <li class="mb-3"><strong class="lead">CS 411: Database Systems</strong> - <span style="font-size: 0.9rem;">SQL, PostgreSQL, MongoDB, and Neo4j databases.</span></li>
-                            <li class="mb-3"><strong class="lead">CS 441: Applied Machine Learning</strong> - <span style="font-size: 0.9rem;">Machine learning fundamentals including CNNs, SVM, clustering, and neural networks.</span></li>
+                            <li class="mb-3"><strong class="lead">CS 598: Deep Learning for Healthcare</strong> - <span class="text-sm">Deep learning fundamentals including CNNs, RNNs, ResNet, Transformers, and Graph Neural Networks. Final project on transfer learning used to classify what activity is being performed based on smartwatch metrics.</span></li>
+                            <li class="mb-3"><strong class="lead">CS 498: Cloud Computing Applications</strong> - <span class="text-sm">Cloud infrastructure and scaling using AWS EC2s, Hadoop, Spark, and ETL pipelines.</span></li>
+                            <li class="mb-3"><strong class="lead">CS 437: Internet of Things</strong> - <span class="text-sm">IoT fundamentals from network stacks to common protocols. Learned AWS services including Glue, Greengrass, and Aurora. Final project: automated farming system.</span></li>
+                            <li class="mb-3"><strong class="lead">CS 411: Database Systems</strong> - <span class="text-sm">SQL, PostgreSQL, MongoDB, and Neo4j databases.</span></li>
+                            <li class="mb-3"><strong class="lead">CS 441: Applied Machine Learning</strong> - <span class="text-sm">Machine learning fundamentals including CNNs, SVM, clustering, and neural networks.</span></li>
                         </ul>
 
                         <h3 class="text-uppercase mb-4">Undergraduate Courses</h3>
                         <ul class="mb-0">
-                            <li class="mb-3"><strong class="lead">ECE 411: Computer Organization and Design</strong> - <span style="font-size: 0.9rem;">Implemented a RISC-V CPU in SystemVerilog covering pipelining, memory organization, I/O design, and reliability evaluation.</span></li>
-                            <li class="mb-3"><strong class="lead">ECE 420: Signal Processing Lab</strong> - <span style="font-size: 0.9rem;">Developed Android applications to apply real-time signal processing techniques.</span></li>
-                            <li class="mb-3"><strong class="lead">ECE 448: Introduction to Artificial Intelligence</strong> - <span style="font-size: 0.9rem;">AI fundamentals including search, classification, machine learning, PyTorch, computer vision, and NLP.</span></li>
-                            <li class="mb-3"><strong class="lead">ECE 408: Applied Parallel Programming</strong> - <span style="font-size: 0.9rem;">CUDA C++ GPU programming covering tiling, reduction/scan operations, sparse matrix multiplication, and raytracing.</span></li>
-                            <li class="mb-3"><strong class="lead">ECE 391: Computer Systems Engineering</strong> - <span style="font-size: 0.9rem;">Built a Linux-like operating system from scratch with filesystem, interrupts, paging, and multitasking scheduler.</span></li>
-                            <li class="mb-3"><strong class="lead">ECE 310/311: Digital Signal Processing</strong> - <span style="font-size: 0.9rem;">DSP theory including DTFT, Z-transform, sampling theory, with Python visualization lab.</span></li>
-                            <li class="mb-3"><strong class="lead">CS 498: Internet of Things</strong> - <span style="font-size: 0.9rem;">IoT device programming (Arduino, Raspberry Pi), protocol stacks (Zigbee, 5G, MQTT), and AWS IoT platform.</span></li>
-                            <li class="mb-3"><strong class="lead">ECE 385: Digital Systems Lab</strong> - <span style="font-size: 0.9rem;">FPGA programming using SystemVerilog. Implemented a match moving algorithm using a camera and an FPGA.</span></li>
+                            <li class="mb-3"><strong class="lead">ECE 411: Computer Organization and Design</strong> - <span class="text-sm">Implemented a RISC-V CPU in SystemVerilog covering pipelining, memory organization, I/O design, and reliability evaluation.</span></li>
+                            <li class="mb-3"><strong class="lead">ECE 420: Signal Processing Lab</strong> - <span class="text-sm">Developed Android applications to apply real-time signal processing techniques.</span></li>
+                            <li class="mb-3"><strong class="lead">ECE 448: Introduction to Artificial Intelligence</strong> - <span class="text-sm">AI fundamentals including search, classification, machine learning, PyTorch, computer vision, and NLP.</span></li>
+                            <li class="mb-3"><strong class="lead">ECE 408: Applied Parallel Programming</strong> - <span class="text-sm">CUDA C++ GPU programming covering tiling, reduction/scan operations, sparse matrix multiplication, and raytracing.</span></li>
+                            <li class="mb-3"><strong class="lead">ECE 391: Computer Systems Engineering</strong> - <span class="text-sm">Built a Linux-like operating system from scratch with filesystem, interrupts, paging, and multitasking scheduler.</span></li>
+                            <li class="mb-3"><strong class="lead">ECE 310/311: Digital Signal Processing</strong> - <span class="text-sm">DSP theory including DTFT, Z-transform, sampling theory, with Python visualization lab.</span></li>
+                            <li class="mb-3"><strong class="lead">CS 498: Internet of Things</strong> - <span class="text-sm">IoT device programming (Arduino, Raspberry Pi), protocol stacks (Zigbee, 5G, MQTT), and AWS IoT platform.</span></li>
+                            <li class="mb-3"><strong class="lead">ECE 385: Digital Systems Lab</strong> - <span class="text-sm">FPGA programming using SystemVerilog. Implemented a match moving algorithm using a camera and an FPGA.</span></li>
                         </ul>
                     </div>
                 </div>
@@ -728,9 +731,7 @@
         <div class="portfolio-modal modal fade" id="amos2025Modal" tabindex="-1" role="dialog" aria-labelledby="amos2025ModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-xl" role="document">
                 <div class="modal-content">
-                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true"><i class="fas fa-times"></i></span>
-                    </button>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     <div class="modal-body text-left">
                         <div class="container">
                             <div class="row justify-content-center">
@@ -749,7 +750,7 @@
                                     <h2> Overview</h2>
                                     <p class="mb-5">I was selected to give a plenary presentation on Expanding Pattern-of-Life capabilities on Passive RF datasets. This will serve as a sequel to my work for the AMOS 2023 conference. This website will be updated after the conference has completed.</p>
                                     <br>
-                                    <button class="btn btn-primary" data-dismiss="modal">
+                                    <button class="btn btn-primary" data-bs-dismiss="modal">
                                         <i class="fas fa-times fa-fw"></i>
                                         Close Window
                                     </button>
@@ -764,9 +765,7 @@
         <div class="portfolio-modal modal fade" id="gsaw2025Modal" tabindex="-1" role="dialog" aria-labelledby="gsaw2025ModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-xl" role="document">
                 <div class="modal-content">
-                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true"><i class="fas fa-times"></i></span>
-                    </button>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     <div class="modal-body text-left">
                         <div class="container">
                             <div class="row justify-content-center">
@@ -785,7 +784,7 @@
                                     <h2> Overview</h2>
                                     <p class="mb-5">I gave a presentation on Methods of Detecting Electromagnetic Interference in Passive Radio Frequency Data. As the website hasn't updated yet, a copy of my work will be uploaded here soon.</p>
                                     <br>
-                                    <button class="btn btn-primary" data-dismiss="modal">
+                                    <button class="btn btn-primary" data-bs-dismiss="modal">
                                         <i class="fas fa-times fa-fw"></i>
                                         Close Window
                                     </button>
@@ -800,9 +799,7 @@
         <div class="portfolio-modal modal fade" id="gsaw2024Modal" tabindex="-1" role="dialog" aria-labelledby="gsaw2024ModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-xl" role="document">
                 <div class="modal-content">
-                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true"><i class="fas fa-times"></i></span>
-                    </button>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     <div class="modal-body text-left">
                         <div class="container">
                             <div class="row justify-content-center">
@@ -821,7 +818,7 @@
                                     <h2> Overview</h2>
                                     <p class="mb-5">I gave a presentation on Monitoring Satellite Pattern-of-Life Changes with Passive Radio Frequency Data. My work can be found at the following link. <p class="mb-5"> <a href="https://gsaw.org/wp-content/uploads/2024/03/2024-S10-3-Scott-Criley-Kratos-Monitoring-Satellite-Pattern-of-Life-Changes-with-Passive-Radio-Frequency-Data-Mohamed-Criley.pdf" target="_blank_">Presentation</a></p></p>
                                     <br>
-                                    <button class="btn btn-primary" data-dismiss="modal">
+                                    <button class="btn btn-primary" data-bs-dismiss="modal">
                                         <i class="fas fa-times fa-fw"></i>
                                         Close Window
                                     </button>
@@ -836,9 +833,7 @@
                 <div class="portfolio-modal modal fade" id="amos2023Modal" tabindex="-1" role="dialog" aria-labelledby="amos2023ModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-xl" role="document">
                 <div class="modal-content">
-                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true"><i class="fas fa-times"></i></span>
-                    </button>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     <div class="modal-body text-left">
                         <div class="container">
                             <div class="row justify-content-center">
@@ -857,7 +852,7 @@
                                     <h2> Overview</h2>
                                     <p class="mb-5">I gave a presentation on Monitoring Satellite Pattern-of-Life Changes with Passive Radio Frequency Data. My paper can be found at the following link. <p class="mb-5"> <a href="https://amostech.com/TechnicalPapers/2023/SDA-Systems-and-Instrumentation/Mohamed.pdf" target="_blank_">Paper</a></p></p>
                                     <br>
-                                    <button class="btn btn-primary" data-dismiss="modal">
+                                    <button class="btn btn-primary" data-bs-dismiss="modal">
                                         <i class="fas fa-times fa-fw"></i>
                                         Close Window
                                     </button>
@@ -872,9 +867,7 @@
         <div class="portfolio-modal modal fade" id="sentinelPrimeModal" tabindex="-1" role="dialog" aria-labelledby="sentinelPrimeModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-xl" role="document">
                 <div class="modal-content">
-                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true"><i class="fas fa-times"></i></span>
-                    </button>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     <div class="modal-body text-left">
                         <div class="container">
                             <div class="row justify-content-center">
@@ -904,7 +897,7 @@
                                     <p class="mb-5 rounded mb-5 text-center"> <em>Screenshot captured in the middle of an AirSim simulation</em></p>
                                     <h2> Advisor</h2>
                                     <p class="mb-5">Professor <a href="https://dchen.ece.illinois.edu/" target="_blank_">Deming Chen</a></p>
-                                    <button class="btn btn-primary" data-dismiss="modal">
+                                    <button class="btn btn-primary" data-bs-dismiss="modal">
                                         <i class="fas fa-times fa-fw"></i>
                                         Close Window
                                     </button>
@@ -916,155 +909,12 @@
             </div>
         </div>
 
-        <div class="portfolio-modal modal fade" id="sentinelPrimeModal" tabindex="-1" role="dialog" aria-labelledby="sentinelPrimeModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-xl" role="document">
-                <div class="modal-content">
-                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true"><i class="fas fa-times"></i></span>
-                    </button>
-                    <div class="modal-body text-left">
-                        <div class="container">
-                            <div class="row justify-content-center">
-                                <div class="col-lg-8">
-                                    <!-- Portfolio Modal - Title-->
-                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0 text-center" id="sentinelPrimeModalLabel">Sentinel Prime</h2>
-                                    <!-- Icon Divider-->
-                                    <div class="divider-custom">
-                                        <div class="divider-custom-line"></div>
-                                        <div class="divider-custom-icon"><i class="fas fa-bezier-curve"></i></div>
-                                        <div class="divider-custom-line"></div>
-                                    </div>
-                                    <!-- Portfolio Modal - Image-->
-                                    <!-- Portfolio Modal - Text-->
-                                    
-                                    <h2> Overview</h2>
-                                    <p class="mb-5">Sentinel Prime was a continuation of Project Sentinel. Sentinel Prime's goal was to detect and classify 3D objects in indoor environments in real time. Originally, the idea was to pair Sentinel with a camera and use the existing LIDAR sensor, then employ a signal fusion network to combine the data and outperform existing 2D and 3D pipelines. Then, the computation would be performed on an FPGA or embedded device to attain real-time computation. However, I set my timeline a little too aggressively. At the start, my approach was to use an NVIDIA Jetson Nano to run existing KITTI models (KITTI is a challenging 3D dataset, a useful benchmark for 3D object detection and classification). The Jetson Nano actually gave me a lot of grief. The primary issue was the ARM-based architecture, which required me to build several libraries from scratch, which took an extremely long time. In the end, I was only able to get a few models running, and had very little time to actually pair the camera and LIDAR sensor. However, I got to explore the state of the art in 3D classification, including testing of Google's Objectron model as well as some of the top-performing KITTI models. I also learned a lot about how to allocate time and perform literature reviews. Even though functionally Sentinel Prime was a failure, I learned a lot and will carry this forward in my career.</p>
-                                    <br>
-                                    <p class="mb-5"> I also got the chance to test out some virtual simulators such as Microsoft AirSim, which I definitely aim to return to for another project. </p>
-                                    <img src="images/airsim.png"
-                                         srcset="images/airsim-400w.png 400w,
-                                                 images/airsim-800w.png 800w,
-                                                 images/airsim-1200w.png 1200w,
-                                                 images/airsim.png 1936w"
-                                         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 1000px"
-                                         class="img-fluid" alt="Responsive image" loading="lazy">
-                                    <p class="mb-5 rounded mb-5 text-center"> <em>Screenshot captured in the middle of an AirSim simulation</em></p>
-                                    <h2> Advisor</h2>
-                                    <p class="mb-5">Professor <a href="https://dchen.ece.illinois.edu/" target="_blank_">Deming Chen</a></p>
-                                    <button class="btn btn-primary" data-dismiss="modal">
-                                        <i class="fas fa-times fa-fw"></i>
-                                        Close Window
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
 
-        <div class="portfolio-modal modal fade" id="sentinelPrimeModal" tabindex="-1" role="dialog" aria-labelledby="sentinelPrimeModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-xl" role="document">
-                <div class="modal-content">
-                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true"><i class="fas fa-times"></i></span>
-                    </button>
-                    <div class="modal-body text-left">
-                        <div class="container">
-                            <div class="row justify-content-center">
-                                <div class="col-lg-8">
-                                    <!-- Portfolio Modal - Title-->
-                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0 text-center" id="sentinelPrimeModalLabel">Sentinel Prime</h2>
-                                    <!-- Icon Divider-->
-                                    <div class="divider-custom">
-                                        <div class="divider-custom-line"></div>
-                                        <div class="divider-custom-icon"><i class="fas fa-bezier-curve"></i></div>
-                                        <div class="divider-custom-line"></div>
-                                    </div>
-                                    <!-- Portfolio Modal - Image-->
-                                    <!-- Portfolio Modal - Text-->
-                                    
-                                    <h2> Overview</h2>
-                                    <p class="mb-5">Sentinel Prime was a continuation of Project Sentinel. Sentinel Prime's goal was to detect and classify 3D objects in indoor environments in real time. Originally, the idea was to pair Sentinel with a camera and use the existing LIDAR sensor, then employ a signal fusion network to combine the data and outperform existing 2D and 3D pipelines. Then, the computation would be performed on an FPGA or embedded device to attain real-time computation. However, I set my timeline a little too aggressively. At the start, my approach was to use an NVIDIA Jetson Nano to run existing KITTI models (KITTI is a challenging 3D dataset, a useful benchmark for 3D object detection and classification). The Jetson Nano actually gave me a lot of grief. The primary issue was the ARM-based architecture, which required me to build several libraries from scratch, which took an extremely long time. In the end, I was only able to get a few models running, and had very little time to actually pair the camera and LIDAR sensor. However, I got to explore the state of the art in 3D classification, including testing of Google's Objectron model as well as some of the top-performing KITTI models. I also learned a lot about how to allocate time and perform literature reviews. Even though functionally Sentinel Prime was a failure, I learned a lot and will carry this forward in my career.</p>
-                                    <br>
-                                    <p class="mb-5"> I also got the chance to test out some virtual simulators such as Microsoft AirSim, which I definitely aim to return to for another project. </p>
-                                    <img src="images/airsim.png"
-                                         srcset="images/airsim-400w.png 400w,
-                                                 images/airsim-800w.png 800w,
-                                                 images/airsim-1200w.png 1200w,
-                                                 images/airsim.png 1936w"
-                                         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 1000px"
-                                         class="img-fluid" alt="Responsive image" loading="lazy">
-                                    <p class="mb-5 rounded mb-5 text-center"> <em>Screenshot captured in the middle of an AirSim simulation</em></p>
-                                    <h2> Advisor</h2>
-                                    <p class="mb-5">Professor <a href="https://dchen.ece.illinois.edu/" target="_blank_">Deming Chen</a></p>
-                                    <button class="btn btn-primary" data-dismiss="modal">
-                                        <i class="fas fa-times fa-fw"></i>
-                                        Close Window
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="portfolio-modal modal fade" id="sentinelPrimeModal" tabindex="-1" role="dialog" aria-labelledby="sentinelPrimeModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-xl" role="document">
-                <div class="modal-content">
-                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true"><i class="fas fa-times"></i></span>
-                    </button>
-                    <div class="modal-body text-left">
-                        <div class="container">
-                            <div class="row justify-content-center">
-                                <div class="col-lg-8">
-                                    <!-- Portfolio Modal - Title-->
-                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0 text-center" id="sentinelPrimeModalLabel">Sentinel Prime</h2>
-                                    <!-- Icon Divider-->
-                                    <div class="divider-custom">
-                                        <div class="divider-custom-line"></div>
-                                        <div class="divider-custom-icon"><i class="fas fa-bezier-curve"></i></div>
-                                        <div class="divider-custom-line"></div>
-                                    </div>
-                                    <!-- Portfolio Modal - Image-->
-                                    <!-- Portfolio Modal - Text-->
-                                    
-                                    <h2> Overview</h2>
-                                    <p class="mb-5">Sentinel Prime was a continuation of Project Sentinel. Sentinel Prime's goal was to detect and classify 3D objects in indoor environments in real time. Originally, the idea was to pair Sentinel with a camera and use the existing LIDAR sensor, then employ a signal fusion network to combine the data and outperform existing 2D and 3D pipelines. Then, the computation would be performed on an FPGA or embedded device to attain real-time computation. However, I set my timeline a little too aggressively. At the start, my approach was to use an NVIDIA Jetson Nano to run existing KITTI models (KITTI is a challenging 3D dataset, a useful benchmark for 3D object detection and classification). The Jetson Nano actually gave me a lot of grief. The primary issue was the ARM-based architecture, which required me to build several libraries from scratch, which took an extremely long time. In the end, I was only able to get a few models running, and had very little time to actually pair the camera and LIDAR sensor. However, I got to explore the state of the art in 3D classification, including testing of Google's Objectron model as well as some of the top-performing KITTI models. I also learned a lot about how to allocate time and perform literature reviews. Even though functionally Sentinel Prime was a failure, I learned a lot and will carry this forward in my career.</p>
-                                    <br>
-                                    <p class="mb-5"> I also got the chance to test out some virtual simulators such as Microsoft AirSim, which I definitely aim to return to for another project. </p>
-                                    <img src="images/airsim.png"
-                                         srcset="images/airsim-400w.png 400w,
-                                                 images/airsim-800w.png 800w,
-                                                 images/airsim-1200w.png 1200w,
-                                                 images/airsim.png 1936w"
-                                         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 1000px"
-                                         class="img-fluid" alt="Responsive image" loading="lazy">
-                                    <p class="mb-5 rounded mb-5 text-center"> <em>Screenshot captured in the middle of an AirSim simulation</em></p>
-                                    <h2> Advisor</h2>
-                                    <p class="mb-5">Professor <a href="https://dchen.ece.illinois.edu/" target="_blank_">Deming Chen</a></p>
-                                    <button class="btn btn-primary" data-dismiss="modal">
-                                        <i class="fas fa-times fa-fw"></i>
-                                        Close Window
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        
 
         <div class="portfolio-modal modal fade" id="sentinelModal" tabindex="-1" role="dialog" aria-labelledby="sentinelModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-xl" role="document">
                 <div class="modal-content">
-                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true"><i class="fas fa-times"></i></span>
-                    </button>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     <div class="modal-body text-left">
                         <div class="container">
                             <div class="row justify-content-center">
@@ -1113,7 +963,7 @@
                                          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 1000px"
                                          class="img-fluid" alt="Responsive image" loading="lazy">
                                     <p class="mb-5 rounded mb-5 text-center"> <em>Screenshot of the Electron application with a point cloud loaded in</em></p>
-                                    <button class="btn btn-primary" data-dismiss="modal">
+                                    <button class="btn btn-primary" data-bs-dismiss="modal">
                                         <i class="fas fa-times fa-fw"></i>
                                         Close Window
                                     </button>
@@ -1128,9 +978,7 @@
         <div class="portfolio-modal modal fade" id="hybrisModal" tabindex="-1" role="dialog" aria-labelledby="hybrisModal" aria-hidden="true">
             <div class="modal-dialog modal-xl" role="document">
                 <div class="modal-content">
-                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true"><i class="fas fa-times"></i></span>
-                    </button>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     <div class="modal-body text-left">
                         <div class="container">
                             <div class="row justify-content-center">
@@ -1177,7 +1025,7 @@
                                     <!-- <br> -->
                                     <!-- <img src="images/sentinel-viz.png" class="img-fluid" alt="Responsive image">
                                     <p class="mb-5 rounded mb-5 text-center"> <em>Screenshot of the Electron application with a point cloud loaded in</em></p> -->
-                                    <button class="btn btn-primary" data-dismiss="modal">
+                                    <button class="btn btn-primary" data-bs-dismiss="modal">
                                         <i class="fas fa-times fa-fw"></i>
                                         Close Window
                                     </button>
@@ -1192,9 +1040,7 @@
         <div class="portfolio-modal modal fade" id="vertFarmingModal" tabindex="-1" role="dialog" aria-labelledby="vertFarmingModal" aria-hidden="true">
             <div class="modal-dialog modal-xl" role="document">
                 <div class="modal-content">
-                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true"><i class="fas fa-times"></i></span>
-                    </button>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     <div class="modal-body text-left">
                         <div class="container">
                             <div class="row justify-content-center">
@@ -1218,7 +1064,7 @@
                                     <p class="mb-5">After my work for basic automated farming, I became really interested in how this could be applied to vertical farming. Check back here for updates on how I attempt to implement vertical farming at a global scale to revolutionize how food distribution and production works. </p>
 
                     
-                                    <button class="btn btn-primary" data-dismiss="modal">
+                                    <button class="btn btn-primary" data-bs-dismiss="modal">
                                         <i class="fas fa-times fa-fw"></i>
                                         Close Window
                                     </button>
@@ -1233,9 +1079,7 @@
         <div class="portfolio-modal modal fade" id="simpleFarmingModal" tabindex="-1" role="dialog" aria-labelledby="simpleFarmingModal" aria-hidden="true">
             <div class="modal-dialog modal-xl" role="document">
                 <div class="modal-content">
-                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true"><i class="fas fa-times"></i></span>
-                    </button>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     <div class="modal-body text-left">
                         <div class="container">
                             <div class="row justify-content-center">
@@ -1261,7 +1105,7 @@
                                     <p class="mb-5"> <a href="https://www.youtube.com/watch?v=cHjv6lHhclM" target="_blank_">Video</a></p>
 
                     
-                                    <button class="btn btn-primary" data-dismiss="modal">
+                                    <button class="btn btn-primary" data-bs-dismiss="modal">
                                         <i class="fas fa-times fa-fw"></i>
                                         Close Window
                                     </button>
@@ -1277,9 +1121,7 @@
         <div class="portfolio-modal modal fade" id="riscvModal" tabindex="-1" role="dialog" aria-labelledby="riscvModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-xl" role="document">
                 <div class="modal-content">
-                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true"><i class="fas fa-times"></i></span>
-                    </button>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     <div class="modal-body text-left">
                         <div class="container">
                             <div class="row justify-content-center">
@@ -1301,7 +1143,7 @@
                                     <p class="mb-5"> I played a significant role in implementing the base CPU and had the chance to augment the CPU with the RISC-V M extension, which supports multiplication and division operation. I decided to use the well-known Wallace Tree to achieve a faster multiplication than an algorithm like add-shift. For the divider, I used a shift-subtract algorithm.  </p>
                                     <h2> Future work </h2>
                                     <p class="mb-5">Although I enjoyed this course, I feel that I could accomplish a lot more with more time. I am planning to revisit this CPU design and augment additional features, such as a tournament branch predictor, multiple-way L1 caches, and . My ultimate goal is to program an FPGA with this CPU and run actual code on it. I might even pursue Tomasulo’s algorithm, as that algorithm makes much more sense to me than a pipeline. Due to academic integrity violations, I can’t upload the CPU from my class but I will update my GitHub if I make something else not in a class.  </p>
-                                    <button class="btn btn-primary" data-dismiss="modal">
+                                    <button class="btn btn-primary" data-bs-dismiss="modal">
                                         <i class="fas fa-times fa-fw"></i>
                                         Close Window
                                     </button>
@@ -1317,9 +1159,7 @@
         <div class="portfolio-modal modal fade" id="blenderModal" tabindex="-1" role="dialog" aria-labelledby="blenderModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-xl" role="document">
                 <div class="modal-content">
-                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true"><i class="fas fa-times"></i></span>
-                    </button>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     <div class="modal-body text-left">
                         <div class="container">
                             <div class="row justify-content-center">
@@ -1341,7 +1181,7 @@
                                         <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/7_lretN-ymk" allowfullscreen></iframe>
                                     </div>
                                     <p> More coming soon! I plan to experiment with physics simulations and video compositing.</p>
-                                    <button class="btn btn-primary" data-dismiss="modal">
+                                    <button class="btn btn-primary" data-bs-dismiss="modal">
                                         <i class="fas fa-times fa-fw"></i>
                                         Close Window
                                     </button>
@@ -1357,9 +1197,7 @@
         <div class="portfolio-modal modal fade" id="lovelessModal" tabindex="-1" role="dialog" aria-labelledby="lovelessModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-xl" role="document">
                 <div class="modal-content">
-                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true"><i class="fas fa-times"></i></span>
-                    </button>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     <div class="modal-body text-left">
                         <div class="container">
                             <div class="row justify-content-center">
@@ -1377,7 +1215,7 @@
                                     <!-- Portfolio Modal - Text-->
                                     <h2> Overview</h2>
                                     <p class="mb-5">I recently downloaded and began visualizing some of my Facebook Messenger messaging data, which led me to consider what an AI would think of my messages. This project will use AI to analyze intent, emotion, mood, and predict future messages. This project will be its own website at some point. More to come soon. </p>
-                                    <button class="btn btn-primary" data-dismiss="modal">
+                                    <button class="btn btn-primary" data-bs-dismiss="modal">
                                         <i class="fas fa-times fa-fw"></i>
                                         Close Window
                                     </button>
@@ -1392,9 +1230,7 @@
         <div class="portfolio-modal modal fade" id="eigenmaskModal" tabindex="-1" role="dialog" aria-labelledby="eigenmaskModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-xl" role="document">
                 <div class="modal-content">
-                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true"><i class="fas fa-times"></i></span>
-                    </button>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     <div class="modal-body text-left">
                         <div class="container">
                             <div class="row justify-content-center">
@@ -1415,7 +1251,7 @@
 
                                     <h2> Process</h2>
                                     <p class="mb-5">The Eigenface algorithm works by finding the eigenvectors from the covariance matrix of the probability distribution over the extremely high-dimensional vector space of face images. This provides dimensionality-reduction, and unknown faces can be classified by comparing them to the eigenvectors determined in training. Training was done on Python, and this was ported over to Android. The project was a success, able to distinguish a few friends and I, as well as whether we were masked or maskless. </p>
-                                    <button class="btn btn-primary" data-dismiss="modal">
+                                    <button class="btn btn-primary" data-bs-dismiss="modal">
                                         <i class="fas fa-times fa-fw"></i>
                                         Close Window
                                     </button>
@@ -1430,9 +1266,7 @@
         <div class="portfolio-modal modal fade" id="cudaModal" tabindex="-1" role="dialog" aria-labelledby="cudaModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-xl" role="document">
                 <div class="modal-content">
-                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true"><i class="fas fa-times"></i></span>
-                    </button>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     <div class="modal-body text-left">
                         <div class="container">
                             <div class="row justify-content-center">
@@ -1559,7 +1393,7 @@
                                           </tr>
                                         </tbody>
                                       </table>
-                                    <button class="btn btn-primary" data-dismiss="modal">
+                                    <button class="btn btn-primary" data-bs-dismiss="modal">
                                         <i class="fas fa-times fa-fw"></i>
                                         Close Window
                                     </button>
@@ -1574,9 +1408,7 @@
         <div class="portfolio-modal modal fade" id="lc4Modal" tabindex="-1" role="dialog" aria-labelledby="lc4ModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-xl" role="document">
                 <div class="modal-content">
-                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true"><i class="fas fa-times"></i></span>
-                    </button>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     <div class="modal-body text-left">
                         <div class="container">
                             <div class="row justify-content-center">
@@ -1621,7 +1453,7 @@
                                     </ul>
                                     <p class="mb-5">One of my group members uploaded a video of our final OS <a href="https://www.youtube.com/watch?v=ARYjKrD7jYs" target="_blank_">here</a>. </p>
                                     <br>
-                                    <button class="btn btn-primary" data-dismiss="modal">
+                                    <button class="btn btn-primary" data-bs-dismiss="modal">
                                         <i class="fas fa-times fa-fw"></i>
                                         Close Window
                                     </button>
@@ -1636,9 +1468,7 @@
         <div class="portfolio-modal modal fade" id="watchdogModal" tabindex="-1" role="dialog" aria-labelledby="watchdogModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-xl" role="document">
                 <div class="modal-content">
-                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true"><i class="fas fa-times"></i></span>
-                    </button>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     <div class="modal-body text-left">
                         <div class="container">
                             <div class="row justify-content-center">
@@ -1657,7 +1487,7 @@
                                     <h2>Overview</h2>
                                     <p class="mb-5">innovateFPGA is a competition hosted by Terasic, where FPGAs are applied towards problems that involve AI at the edge. In this vein, my colleague and I submitted a proposal for Project Watchdog, an FPGA-based smart home security camera that performed all classification locally and only sent the output of the classification to a computer, thus reducing the amount of bandwidth needed to send video to an external server. In addition, this solution does not need an internet connection to perform a classification.</p>
                                     <p class="mb-5">We placed as regional finalists in the competition, and our full write-up can be found <a href="http://www.innovatefpga.com/cgi-bin/innovate/teams.pl?Id=AS020" target="_blank_">here</a> .</p>
-                                    <button class="btn btn-primary" data-dismiss="modal">
+                                    <button class="btn btn-primary" data-bs-dismiss="modal">
                                         <i class="fas fa-times fa-fw"></i>
                                         Close Window
                                     </button>
@@ -1672,9 +1502,7 @@
         <div class="portfolio-modal modal fade" id="ldModal" tabindex="-1" role="dialog" aria-labelledby="ldModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-xl" role="document">
                 <div class="modal-content">
-                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true"><i class="fas fa-times"></i></span>
-                    </button>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     <div class="modal-body text-left">
                         <div class="container">
                             <div class="row justify-content-center">
@@ -1702,7 +1530,7 @@
                                         <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/chocc--7Fws" allowfullscreen></iframe>
                                     </div>
                                     <br>
-                                    <button class="btn btn-primary" data-dismiss="modal">
+                                    <button class="btn btn-primary" data-bs-dismiss="modal">
                                         <i class="fas fa-times fa-fw"></i>
                                         Close Window
                                     </button>
@@ -1717,9 +1545,7 @@
         <div class="portfolio-modal modal fade" id="hackmeModal" tabindex="-1" role="dialog" aria-labelledby="hackmeModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-xl" role="document">
                 <div class="modal-content">
-                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true"><i class="fas fa-times"></i></span>
-                    </button>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     <div class="modal-body text-left">
                         <div class="container">
                             <div class="row justify-content-center">
@@ -1761,7 +1587,7 @@
                                         
                                         This project was very well received at the 2019 Hackathon. It won the Caterpillar and Particle Design Awards, and was also a runner-up for the Hackathon. More information can be found <a href="https://devpost.com/software/hackme" target="_blank_">here</a>.
                                         </p>
-                                    <button class="btn btn-primary" data-dismiss="modal">
+                                    <button class="btn btn-primary" data-bs-dismiss="modal">
                                         <i class="fas fa-times fa-fw"></i>
                                         Close Window
                                     </button>
@@ -1776,9 +1602,7 @@
         <div class="portfolio-modal modal fade" id="ifeModal" tabindex="-1" role="dialog" aria-labelledby="ifeModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-xl" role="document">
                 <div class="modal-content">
-                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true"><i class="fas fa-times"></i></span>
-                    </button>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     <div class="modal-body text-left">
                         <div class="container">
                             <div class="row justify-content-center">
@@ -1832,7 +1656,7 @@
                                              class="img-fluid" alt="Responsive image" loading="lazy">
                                         <p class="mb-5 text-center"><em> Render of board developed for DAQA</em> </p>
 
-                                    <button class="btn btn-primary" data-dismiss="modal">
+                                    <button class="btn btn-primary" data-bs-dismiss="modal">
                                         <i class="fas fa-times fa-fw"></i>
                                         Close Window
                                     </button>
@@ -1847,9 +1671,7 @@
         <div class="portfolio-modal modal fade" id="smarthomeModal" tabindex="-1" role="dialog" aria-labelledby="smarthomeModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-xl" role="document">
                 <div class="modal-content">
-                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true"><i class="fas fa-times"></i></span>
-                    </button>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     <div class="modal-body text-left">
                         <div class="container">
                             <div class="row justify-content-center">
@@ -1867,7 +1689,7 @@
                                     <!-- Portfolio Modal - Text-->
                                     <h2> Overview</h2>
                                     <p class="mb-5">My attempt to make a secure, AI augmented version of my apartment. More to come soon! </p>
-                                    <button class="btn btn-primary" data-dismiss="modal">
+                                    <button class="btn btn-primary" data-bs-dismiss="modal">
                                         <i class="fas fa-times fa-fw"></i>
                                         Close Window
                                     </button>
@@ -1882,9 +1704,7 @@
         <div class="portfolio-modal modal fade" id="ocrModal" tabindex="-1" role="dialog" aria-labelledby="ocrModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-xl" role="document">
                 <div class="modal-content">
-                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true"><i class="fas fa-times"></i></span>
-                    </button>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     <div class="modal-body text-left">
                         <div class="container">
                             <div class="row justify-content-center">
@@ -1902,7 +1722,7 @@
                                     <!-- Portfolio Modal - Text-->
                                     <h2> Overview</h2>
                                     <p class="mb-5">As part of the 2018 ECE PULSE competition, me and 3 other group members interfaced a Tobii eye tracker with a C# application to assist those with dyslexia. This would operate by using OCR to analyze when someone is trying to read text on a computer screen and based on how long someone is looking at text, analyze if they are having trouble reading it. Then, it can take the data and then graph it. Due to time constraints, we were only able to get the eye tracker data and figure out what parts of the screen were being looked at. We were 2nd place runners up in the competition.</p>
-                                    <button class="btn btn-primary" data-dismiss="modal">
+                                    <button class="btn btn-primary" data-bs-dismiss="modal">
                                         <i class="fas fa-times fa-fw"></i>
                                         Close Window
                                     </button>
@@ -1917,9 +1737,7 @@
         <div class="portfolio-modal modal fade" id="steveModal" tabindex="-1" role="dialog" aria-labelledby="steveModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-xl" role="document">
                 <div class="modal-content">
-                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true"><i class="fas fa-times"></i></span>
-                    </button>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     <div class="modal-body text-left">
                         <div class="container">
                             <div class="row justify-content-center">
@@ -1970,7 +1788,7 @@
                                         <p class="mb-5 text-center"><em> GPS output visualized </em> </p>
 
                                     <p class="mb-5">Even though we were not able to meet all of the goals we set for the project, we consider STEVE an incredible success.</p>
-                                    <button class="btn btn-primary" data-dismiss="modal">
+                                    <button class="btn btn-primary" data-bs-dismiss="modal">
                                         <i class="fas fa-times fa-fw"></i>
                                         Close Window
                                     </button>
@@ -1985,9 +1803,7 @@
         <div class="portfolio-modal modal fade" id="shippingModal" tabindex="-1" role="dialog" aria-labelledby="shippingModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-xl" role="document">
                 <div class="modal-content">
-                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true"><i class="fas fa-times"></i></span>
-                    </button>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     <div class="modal-body text-left">
                         <div class="container">
                             <div class="row justify-content-center">
@@ -2005,7 +1821,7 @@
                                     <!-- Portfolio Modal - Text-->
                                     <h2> Overview</h2>
                                     <p class="mb-5">The first programming language I learned was Javascript. From there, I use Codeacademy to learn HTML and CSS, and I was cranking out simple, unaesthetic webpages like nobody's business. During high school, a trend that took off (and is still extremely relevant today) is "shipping" people together. "Ship" is short for relationship, and it essentially means pairing people together as couples. This idea led directly to the Shipping Generator. We loaded everyone's name from our classes, and everytime "Generate" was clicked, a boy's name and a girl's name would be chosen at random. Incredibly simple, but the project took off and soared in popularity. The generator got hundreds of page requests a week, a lot of which was actually during class time, since the website was not blocked by the firewall. People began asking for more features, the most prominent of which ended up being a leaderboard. Designing a leaderboard in high school with no concept of what databases were was actually a difficult task, but we ended up having the website complete a Google Form and then had a public readonly spreadsheet where we sorted the results. This led to people figuring this out and filling out the forms themselves, which led to us adding in obfuscation and security features. While rudimentary, still one of my favorite projects that I have worked on.</p>
-                                    <button class="btn btn-primary" data-dismiss="modal">
+                                    <button class="btn btn-primary" data-bs-dismiss="modal">
                                         <i class="fas fa-times fa-fw"></i>
                                         Close Window
                                     </button>
@@ -2020,9 +1836,7 @@
         <div class="portfolio-modal modal fade" id="kratosFullTimeModal" tabindex="-1" role="dialog" aria-labelledby="kratosFullTimeModalkratosFullTimeModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-xl" role="document">
                 <div class="modal-content">
-                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true"><i class="fas fa-times"></i></span>
-                    </button>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     <div class="modal-body text-left">
                         <div class="container">
                             <div class="row justify-content-center">
@@ -2040,7 +1854,7 @@
                                     <!-- Portfolio Modal - Text-->
                                     <h2> Overview </h2>
                                     <p class="mb-5">At Kratos Defense, my official title is "Space Domain Awareness Software Development Engineer", but informally I serve as the AI/ML lead. My work spans the entirety of the data stack, from data cleaning to data pipeline development to the training and implementation of cutting edge algorithms to extract unique insights from RF datasets. Please consult my resume for specifics.  </p>
-                                    <button class="btn btn-primary" data-dismiss="modal">
+                                    <button class="btn btn-primary" data-bs-dismiss="modal">
                                         <i class="fas fa-times fa-fw"></i>
                                         Close Window
                                     </button>
@@ -2055,9 +1869,7 @@
         <div class="portfolio-modal modal fade" id="nvidiaModal" tabindex="-1" role="dialog" aria-labelledby="nvidiaModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-xl" role="document">
                 <div class="modal-content">
-                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true"><i class="fas fa-times"></i></span>
-                    </button>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     <div class="modal-body text-left">
                         <div class="container">
                             <div class="row justify-content-center">
@@ -2075,7 +1887,7 @@
                                     <!-- Portfolio Modal - Text-->
                                     <h2> Overview </h2>
                                     <p class="mb-5">I will be a computer architecture intern this summer. This page will be updated after I have completed my internship! </p>
-                                    <button class="btn btn-primary" data-dismiss="modal">
+                                    <button class="btn btn-primary" data-bs-dismiss="modal">
                                         <i class="fas fa-times fa-fw"></i>
                                         Close Window
                                     </button>
@@ -2090,16 +1902,14 @@
         <div class="portfolio-modal modal fade" id="kratos1Modal" tabindex="-1" role="dialog" aria-labelledby="kratos1ModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-xl" role="document">
                 <div class="modal-content">
-                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                    <button class="close" type="button" data-bs-dismiss="modal" aria-label="Close">
             </div>
         </div>
 
         <div class="portfolio-modal modal fade" id="three91Modal" tabindex="-1" role="dialog" aria-labelledby="391ModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-xl" role="document">
                 <div class="modal-content">
-                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true"><i class="fas fa-times"></i></span>
-                    </button>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     <div class="modal-body text-left">
                         <div class="container">
                             <div class="row justify-content-center">
@@ -2128,7 +1938,7 @@
                                         <li>File system abstractions: disk layout, access control lists and capabilities, log-structured and traditional filesystems as design problem</li>
                                         <li>    I/O interface: file descriptors, buffering, control operations, memory mapping</li>
                                     </ul>
-                                    <button class="btn btn-primary" data-dismiss="modal">
+                                    <button class="btn btn-primary" data-bs-dismiss="modal">
                                         <i class="fas fa-times fa-fw"></i>
                                         Close Window
                                     </button>
@@ -2143,9 +1953,7 @@
         <div class="portfolio-modal modal fade" id="three10Modal" tabindex="-1" role="dialog" aria-labelledby="310ModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-xl" role="document">
                 <div class="modal-content">
-                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true"><i class="fas fa-times"></i></span>
-                    </button>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     <div class="modal-body text-left">
                         <div class="container">
                             <div class="row justify-content-center">
@@ -2174,7 +1982,7 @@
                                         <li>Sampling Theory</li>
                                         <li>   A/D and D/A conversion</li>
                                     </ul>
-                                    <button class="btn btn-primary" data-dismiss="modal">
+                                    <button class="btn btn-primary" data-bs-dismiss="modal">
                                         <i class="fas fa-times fa-fw"></i>
                                         Close Window
                                     </button>
@@ -2189,9 +1997,7 @@
         <div class="portfolio-modal modal fade" id="four98Modal" tabindex="-1" role="dialog" aria-labelledby="498ModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-xl" role="document">
                 <div class="modal-content">
-                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true"><i class="fas fa-times"></i></span>
-                    </button>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     <div class="modal-body text-left">
                         <div class="container">
                             <div class="row justify-content-center">
@@ -2214,7 +2020,7 @@
                                         <li>         Networking backhaul design and security enforcement</li>
                                         <li>   Cloud-based IoT platforms such as AWS IoT</li>
                                     </ul>
-                                    <button class="btn btn-primary" data-dismiss="modal">
+                                    <button class="btn btn-primary" data-bs-dismiss="modal">
                                         <i class="fas fa-times fa-fw"></i>
                                         Close Window
                                     </button>
@@ -2229,9 +2035,7 @@
         <div class="portfolio-modal modal fade" id="three85Modal" tabindex="-1" role="dialog" aria-labelledby="385ModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-xl" role="document">
                 <div class="modal-content">
-                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true"><i class="fas fa-times"></i></span>
-                    </button>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     <div class="modal-body text-left">
                         <div class="container">
                             <div class="row justify-content-center">
@@ -2261,7 +2065,7 @@
                                         <li>Logic simulation and testbenches</li>
                                         <li>Microprocessors and system on chip</li>
                                     </ul>
-                                    <button class="btn btn-primary" data-dismiss="modal">
+                                    <button class="btn btn-primary" data-bs-dismiss="modal">
                                         <i class="fas fa-times fa-fw"></i>
                                         Close Window
                                     </button>
@@ -2285,7 +2089,7 @@
             gtag('config', 'UA-140232502-1');
         </script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Third party plugin JS-->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
         <!-- Contact form JS-->

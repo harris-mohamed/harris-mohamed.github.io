@@ -61,20 +61,13 @@
   // Shrink the navbar when page is scrolled
   document.addEventListener('scroll', navbarShrink);
 
-  // Handle modal opening from URL hash
-  const modals = [
-    "#sentinelPrimeModal", "#sentinelModal", "#hybrisModal", "#riscvModal",
-    "#blenderModal", "#lovelessModal", "#eigenmaskModal", "#cudaModal",
-    "#lc4Modal", "#watchdogModal", "#ldModal", "#hackmeModal", "#ifeModal",
-    "#smarthomeModal", "#ocrModal", "#steveModal", "#shippingModal",
-    "#nvidiaModal", "#kratos1Modal", "#kratos2Modal", "#continentalModal",
-    "#weberModal", "#UAModal"
-  ];
+  // Handle modal opening from URL hash - dynamic discovery
+  if (window.location.hash) {
+    const hash = window.location.hash;
+    const modalElement = document.querySelector(hash);
 
-  // Check if URL hash matches any modal and open it
-  if (window.location.hash && modals.includes(window.location.hash)) {
-    const modalElement = document.querySelector(window.location.hash);
-    if (modalElement) {
+    // Check if element exists and is a Bootstrap modal
+    if (modalElement && modalElement.classList.contains('modal')) {
       const modal = new bootstrap.Modal(modalElement);
       modal.show();
     }
