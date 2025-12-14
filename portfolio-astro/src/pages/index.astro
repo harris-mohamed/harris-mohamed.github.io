@@ -1,0 +1,284 @@
+---
+import Layout from '../components/Layout.astro';
+import ProjectCard from '../components/ProjectCard.astro';
+import ProjectModal from '../components/ProjectModal.astro';
+import { getCollection } from 'astro:content';
+
+const projects = await getCollection('projects');
+const research = await getCollection('research');
+const courses = await getCollection('courses');
+const industry = await getCollection('industry');
+---
+
+<Layout title="Harris Mohamed - Portfolio">
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand js-scroll-trigger" href="#page-top">Harris Mohamed</a>
+      <button class="navbar-toggler navbar-toggler-right text-uppercase font-weight-bold bg-primary text-white rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        Menu
+        <i class="fas fa-bars"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#about">About</a></li>
+          <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#research">Research</a></li>
+          <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#projects">Projects</a></li>
+          <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#industry">Industry</a></li>
+          <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#teaching">Teaching</a></li>
+          <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#coursework">Coursework</a></li>
+          <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="https://drive.google.com/file/d/1RG1WF9OozKJB8XIzDVneYzssl3Ht1mAr/view?usp=drive_link" target="_blank">Resume</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Masthead -->
+  <header class="masthead bg-primary text-white text-center">
+    <div class="container d-flex align-items-center flex-column">
+      <img class="masthead-avatar mb-5 rounded-circle object-fit-cover aspect-ratio-square" src="/images/headshot.jpg" alt="Harris Mohamed" />
+      <h1 class="masthead-heading text-uppercase mb-0">Harris Mohamed</h1>
+      <div class="divider-custom divider-light">
+        <div class="divider-custom-line"></div>
+        <div class="divider-custom-icon"><i class="fas fa-bezier-curve"></i></div>
+        <div class="divider-custom-line"></div>
+      </div>
+      <p class="masthead-subheading font-weight-light mb-0">UIUC 2021 - BS in Computer Engineering</p>
+      <p class="masthead-subheading font-weight-light mb-0">UIUC 2025 - MSc in Computer Science</p>
+      <br />
+      <p class="font-weight-light mb-0"><em>Creativity is intelligence having fun</em> - Albert Einstein</p>
+    </div>
+  </header>
+
+  <!-- About Section -->
+  <section class="page-section bg-secondary text-white mb-0 about" id="about">
+    <div class="container">
+      <h2 class="page-section-heading text-center text-uppercase text-white">About</h2>
+      <div class="divider-custom divider-light">
+        <div class="divider-custom-line"></div>
+        <div class="divider-custom-icon"><i class="fas fa-bezier-curve"></i></div>
+        <div class="divider-custom-line"></div>
+      </div>
+      <p class="masthead-subheading font-weight-light mb-0">
+        Hello! I'm Harris. I have a Bachelor's Degree in Computer Engineering and a Master of Computer Science both from the
+        University of Illinois at Urbana-Champaign. I have completed several internships in industry and am currently
+        employed at Kratos Defense and Security Solutions. At Kratos, I apply advanced AI/ML techniques to RF data from our
+        global sensor network to enhance Space Domain Awareness (SDA) areas including but not limited to satellite tracking,
+        signal pattern-of-life, and satcom analysis. In my spare time, I pursue creative and technical efforts, such as
+        filmmaking and vertical farming.
+      </p>
+      <div class="align-items-center text-center">
+        <br />
+        <a class="btn btn-outline-light btn-social mx-1" href="mailto:hmoham25@illinois.edu" target="_blank"><i class="fas fa-fw fa-envelope-square"></i></a>
+        <a class="btn btn-outline-light btn-social mx-1" href="https://www.linkedin.com/in/harris-mohamed/" target="_blank"><i class="fab fa-fw fa-linkedin-in"></i></a>
+        <a class="btn btn-outline-light btn-social mx-1" href="https://github.com/harris-mohamed" target="_blank"><i class="fab fa-fw fa-github"></i></a>
+        <a class="btn btn-outline-light btn-social mx-1" href="https://www.youtube.com/channel/UCnbbYTClnEvzT_RWaMbW9LQ" target="_blank"><i class="fab fa-fw fa-youtube"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Research Section -->
+  <section class="page-section portfolio bg-primary text-white" id="research">
+    <div class="container">
+      <h2 class="page-section-heading text-center text-uppercase text-white mb-0">Research</h2>
+      <div class="divider-custom divider-light">
+        <div class="divider-custom-line"></div>
+        <div class="divider-custom-icon"><i class="fas fa-bezier-curve"></i></div>
+        <div class="divider-custom-line"></div>
+      </div>
+      <div class="row justify-content-center">
+        {research.map((item, i) => (
+          <ProjectCard
+            title={item.data.title}
+            image={item.data.image}
+            modalId={`research-${i}`}
+          />
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section class="page-section portfolio bg-secondary text-white" id="projects">
+    <div class="container">
+      <h2 class="page-section-heading text-center text-uppercase text-white mb-0">Personal Projects</h2>
+      <div class="divider-custom divider-light">
+        <div class="divider-custom-line"></div>
+        <div class="divider-custom-icon"><i class="fas fa-bezier-curve"></i></div>
+        <div class="divider-custom-line"></div>
+      </div>
+      <div class="row justify-content-center">
+        {projects.map((project, i) => (
+          <ProjectCard
+            title={project.data.title}
+            image={project.data.image}
+            status={project.data.status}
+            modalId={`project-${i}`}
+          />
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Industry Section -->
+  <section class="page-section portfolio bg-primary text-white" id="industry">
+    <div class="container">
+      <h2 class="page-section-heading text-center text-uppercase text-white mb-0">Industry Experience</h2>
+      <div class="divider-custom divider-light">
+        <div class="divider-custom-line"></div>
+        <div class="divider-custom-icon"><i class="fas fa-bezier-curve"></i></div>
+        <div class="divider-custom-line"></div>
+      </div>
+      <div class="row justify-content-center">
+        {industry.map((item, i) => (
+          <ProjectCard
+            title={`${item.data.title} - ${item.data.company}`}
+            image={item.data.image}
+            status={item.data.dates}
+            modalId={`industry-${i}`}
+          />
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Teaching Section -->
+  <section class="page-section portfolio bg-secondary text-white" id="teaching">
+    <div class="container">
+      <h2 class="page-section-heading text-center text-uppercase text-white mb-0">Teaching Experience</h2>
+      <div class="divider-custom divider-light">
+        <div class="divider-custom-line"></div>
+        <div class="divider-custom-icon"><i class="fas fa-bezier-curve"></i></div>
+        <div class="divider-custom-line"></div>
+      </div>
+      <p class="text-center">Teaching experience content will go here.</p>
+    </div>
+  </section>
+
+  <!-- Coursework Section -->
+  <section class="page-section portfolio bg-primary text-white" id="coursework">
+    <div class="container">
+      <h2 class="page-section-heading text-center text-uppercase text-white mb-0">Relevant Coursework</h2>
+      <div class="divider-custom divider-light">
+        <div class="divider-custom-line"></div>
+        <div class="divider-custom-icon"><i class="fas fa-bezier-curve"></i></div>
+        <div class="divider-custom-line"></div>
+      </div>
+
+      <h3 class="text-center text-uppercase mb-4">Graduate</h3>
+      <div class="row justify-content-center">
+        {courses.filter(c => c.data.level === 'Graduate').map((course, i) => (
+          <ProjectCard
+            title={course.data.title}
+            image={course.data.image}
+            modalId={`course-grad-${i}`}
+          />
+        ))}
+      </div>
+
+      <h3 class="text-center text-uppercase mb-4 mt-5">Undergraduate</h3>
+      <div class="row justify-content-center">
+        {courses.filter(c => c.data.level === 'Undergraduate').map((course, i) => (
+          <ProjectCard
+            title={course.data.title}
+            image={course.data.image}
+            modalId={`course-undergrad-${i}`}
+          />
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer text-center bg-secondary text-white">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 mb-5 mb-lg-0">
+          <h4 class="text-uppercase mb-4">Around the Web</h4>
+          <a class="btn btn-outline-light btn-social mx-1" href="mailto:hmoham25@illinois.edu" target="_blank"><i class="fas fa-fw fa-envelope-square"></i></a>
+          <a class="btn btn-outline-light btn-social mx-1" href="https://www.linkedin.com/in/harris-mohamed/" target="_blank"><i class="fab fa-fw fa-linkedin-in"></i></a>
+          <a class="btn btn-outline-light btn-social mx-1" href="https://github.com/harris-mohamed" target="_blank"><i class="fab fa-fw fa-github"></i></a>
+          <a class="btn btn-outline-light btn-social mx-1" href="https://www.youtube.com/channel/UCnbbYTClnEvzT_RWaMbW9LQ" target="_blank"><i class="fab fa-fw fa-youtube"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Copyright Section -->
+  <div class="copyright py-4 text-center text-white">
+    <div class="container"><small>Copyright &copy; Harris Mohamed 2025</small></div>
+  </div>
+
+  <!-- Research Modals -->
+  {research.map(async (item, i) => {
+    const { Content } = await item.render();
+    return (
+      <ProjectModal
+        id={`research-${i}`}
+        title={item.data.title}
+      >
+        <Content />
+        {item.data.linkUrl && (
+          <p class="mt-4">
+            <a href={item.data.linkUrl} target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+              {item.data.linkText || 'View Publication'}
+            </a>
+          </p>
+        )}
+      </ProjectModal>
+    );
+  })}
+
+  <!-- Project Modals -->
+  {projects.map(async (project, i) => {
+    const { Content } = await project.render();
+    return (
+      <ProjectModal
+        id={`project-${i}`}
+        title={project.data.title}
+        videoUrl={project.data.videoUrl}
+        githubUrl={project.data.githubUrl}
+      >
+        <Content />
+      </ProjectModal>
+    );
+  })}
+
+  <!-- Industry Modals -->
+  {industry.map(async (item, i) => {
+    const { Content } = await item.render();
+    return (
+      <ProjectModal
+        id={`industry-${i}`}
+        title={`${item.data.title} - ${item.data.company}`}
+      >
+        <Content />
+      </ProjectModal>
+    );
+  })}
+
+  <!-- Course Modals -->
+  {courses.filter(c => c.data.level === 'Graduate').map(async (course, i) => {
+    const { Content } = await course.render();
+    return (
+      <ProjectModal
+        id={`course-grad-${i}`}
+        title={course.data.title}
+      >
+        <Content />
+      </ProjectModal>
+    );
+  })}
+
+  {courses.filter(c => c.data.level === 'Undergraduate').map(async (course, i) => {
+    const { Content } = await course.render();
+    return (
+      <ProjectModal
+        id={`course-undergrad-${i}`}
+        title={course.data.title}
+      >
+        <Content />
+      </ProjectModal>
+    );
+  })}
+</Layout>

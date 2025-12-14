@@ -1,0 +1,54 @@
+---
+interface Props {
+  id: string;
+  title: string;
+  videoUrl?: string;
+  githubUrl?: string;
+}
+
+const { id, title, videoUrl, githubUrl } = Astro.props;
+---
+
+<div class="portfolio-modal modal fade" id={id} tabindex="-1" role="dialog" aria-labelledby={`${id}Label`} aria-hidden="true">
+  <div class="modal-dialog modal-xl" role="document">
+    <div class="modal-content">
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true"><i class="fas fa-times"></i></span>
+      </button>
+      <div class="modal-body text-center">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-lg-8">
+              <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">{title}</h2>
+              <div class="divider-custom">
+                <div class="divider-custom-line"></div>
+                <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                <div class="divider-custom-line"></div>
+              </div>
+              <div class="text-left">
+                <slot />
+              </div>
+              {videoUrl && (
+                <p class="mt-4">
+                  <a href={videoUrl} target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                    <i class="fas fa-video"></i> Watch Video
+                  </a>
+                </p>
+              )}
+              {githubUrl && (
+                <p class="mt-4">
+                  <a href={githubUrl} target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                    <i class="fab fa-github"></i> View on GitHub
+                  </a>
+                </p>
+              )}
+              <button class="btn btn-primary mt-4" data-dismiss="modal">
+                <i class="fas fa-times"></i> Close Window
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
