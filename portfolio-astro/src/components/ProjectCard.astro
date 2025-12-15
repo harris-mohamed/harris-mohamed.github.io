@@ -23,7 +23,7 @@ const { title, image, status, modalId } = Astro.props;
       <button type="button" class="btn btn-outline-success" disabled>{status}</button>
     </div>
   )}
-  <p class="page-section-subheading text-center text-secondary mb-0">{title}</p>
+  <p class="page-section-subheading text-center mb-0">{title}</p>
   <div class="row justify-content-center">
     <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target={`#${modalId}`}>Click for details</button>
   </div>
