@@ -1,43 +1,11 @@
 ---
-title: "Vertical Farming: Automated hydroponic vertical farm with IoT monitoring"
-image: "vertical_farm.jpg"
+title: "Vertical Farming"
+image: "simple-automated-farming.png"
 status: "In Progress"
-description: "An automated vertical farming system with environmental monitoring, nutrient control, and remote management capabilities."
-tags: ["IoT", "Hardware", "Agriculture"]
+description: "Scaling automated farming technology to vertical farming for global food distribution and production."
+tags: ["IoT", "Agriculture", "Automation", "Vertical Farming"]
 ---
 
-## Project Overview
+## Overview
 
-This project combines my interests in hardware, software, and sustainable agriculture. The goal is to create a fully automated vertical farming system that can grow fresh produce year-round with minimal human intervention.
-
-## Features
-
-### Hardware Components
-- Multi-tier vertical growing structure
-- LED grow lights with programmable spectrums
-- Hydroponic nutrient delivery system
-- Environmental sensors (temperature, humidity, pH, EC)
-- Automated water pumps and nutrient dosing
-
-### Software & IoT
-- Real-time environmental monitoring
-- Automated climate control
-- Remote access via web dashboard
-- Data logging and analytics
-- Alert system for anomalies
-
-### Current Progress
-- Hardware assembly: 80% complete
-- Sensor integration: Complete
-- Automated control system: In development
-- Web dashboard: Planned
-
-## Goals
-
-The ultimate goal is to create a sustainable, efficient system that can be replicated for urban farming applications, reducing food miles and providing fresh produce in areas with limited agricultural space.
-
-## Next Steps
-- Complete automation software
-- Optimize nutrient delivery algorithms
-- Implement machine learning for predictive yield optimization
-- Document build process for open-source release
+After my work for basic automated farming, I became really interested in how this could be applied to vertical farming. Check back here for updates on how I attempt to implement vertical farming at a global scale to revolutionize how food distribution and production works.
