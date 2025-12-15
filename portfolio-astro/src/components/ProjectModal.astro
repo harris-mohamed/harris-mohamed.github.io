@@ -12,9 +12,7 @@ const { id, title, videoUrl, githubUrl } = Astro.props;
 <div class="portfolio-modal modal fade" id={id} tabindex="-1" role="dialog" aria-labelledby={`${id}Label`} aria-hidden="true">
   <div class="modal-dialog modal-xl" role="document">
     <div class="modal-content">
-      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-        <span aria-hidden="true"><i class="fas fa-times"></i></span>
-      </button>
+      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       <div class="modal-body text-center">
         <div class="container">
           <div class="row justify-content-center">
@@ -42,7 +40,7 @@ const { id, title, videoUrl, githubUrl } = Astro.props;
                   </a>
                 </p>
               )}
-              <button class="btn btn-primary mt-4" data-dismiss="modal">
+              <button class="btn btn-primary mt-4" data-bs-dismiss="modal">
                 <i class="fas fa-times"></i> Close Window
               </button>
             </div>
