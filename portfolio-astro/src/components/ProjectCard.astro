@@ -18,11 +18,13 @@ const { title, image, status, modalId } = Astro.props;
     </div>
     <img class="img-fluid" src={`/images/${image}`} alt={title} />
   </div>
-  <p class="text-center mt-2">
-    {status && <span class="badge badge-info">{status}</span>}<br />
-    <strong>{title}</strong>
-  </p>
-  <p class="text-center">
-    <a href="#" data-bs-toggle="modal" data-bs-target={`#${modalId}`}>Click for details</a>
-  </p>
+  {status && (
+    <div class="text-center">
+      <button type="button" class="btn btn-outline-success" disabled>{status}</button>
+    </div>
+  )}
+  <p class="page-section-subheading text-center text-secondary mb-0">{title}</p>
+  <div class="row justify-content-center">
+    <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target={`#${modalId}`}>Click for details</button>
+  </div>
 </div>
