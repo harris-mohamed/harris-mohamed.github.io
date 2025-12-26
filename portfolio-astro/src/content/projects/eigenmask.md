@@ -1,5 +1,6 @@
 ---
 title: "Eigenmask"
+date: "2020-05-01"
 image: "eigenmask.png"
 status: "Completed"
 description: "Eigenmask: A solution to detect if masks are being worn or not"

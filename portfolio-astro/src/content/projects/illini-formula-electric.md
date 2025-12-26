@@ -1,5 +1,6 @@
 ---
 title: "DAQA Leader for Illini Formula Electric"
+date: "2018-08-01"
 image: "car.jpg"
 status: "Club"
 description: "DAQA leader for Illini Formula Electric"

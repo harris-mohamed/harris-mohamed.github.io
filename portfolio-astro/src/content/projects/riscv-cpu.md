@@ -1,5 +1,6 @@
 ---
 title: "Custom Pipelined RISC-V Implementation"
+date: "2020-12-01"
 image: "risc.jpeg"
 status: "Completed"
 description: "Custom implementation of a pipelined RISC-V CPU"

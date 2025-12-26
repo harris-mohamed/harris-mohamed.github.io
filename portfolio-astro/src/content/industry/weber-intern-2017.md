@@ -1,5 +1,6 @@
 ---
 title: "Product Systems Intern"
+date: "2017-06-01"
 company: "Weber Packaging Solutions"
 image: "weber.png"
 dates: "Summer 2017"

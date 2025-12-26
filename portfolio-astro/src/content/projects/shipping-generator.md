@@ -1,5 +1,6 @@
 ---
 title: "Shipping Generator"
+date: "2016-01-01"
 image: "test3.jpg"
 status: "Just for fun"
 description: "Shipping Generator web application"

@@ -1,5 +1,6 @@
 ---
 title: "System Software Engineering Intern"
+date: "2020-06-01"
 company: "Kratos Defense & Security Solutions"
 image: "kratos.png"
 dates: "Summer 2020"

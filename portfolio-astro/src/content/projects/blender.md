@@ -1,5 +1,6 @@
 ---
 title: "Blender"
+date: "2020-01-01"
 image: "trees_4k.png"
 status: "Just for fun"
 description: "Blender 3D modeling and rendering projects"

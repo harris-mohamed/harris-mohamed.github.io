@@ -1,5 +1,6 @@
 ---
 title: "Simple Automated Farming"
+date: "2019-05-01"
 image: "simple-automated-farming.png"
 status: "Completed"
 description: "Basic automated farming implementation"

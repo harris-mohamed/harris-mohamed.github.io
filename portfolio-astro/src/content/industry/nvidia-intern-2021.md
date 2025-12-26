@@ -1,5 +1,6 @@
 ---
 title: "Computer Architecture Intern"
+date: "2021-06-01"
 company: "NVIDIA"
 image: "nvidia.jpg"
 dates: "Summer 2021"

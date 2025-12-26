@@ -7,6 +7,7 @@ const projects = defineCollection({
     image: z.string(),
     status: z.string().optional(),
     description: z.string(),
+    date: z.string(),
     videoUrl: z.string().url().optional(),
     githubUrl: z.string().url().optional(),
     tags: z.array(z.string()).optional(),
@@ -18,6 +19,8 @@ const research = defineCollection({
   schema: z.object({
     title: z.string(),
     image: z.string(),
+    date: z.string(),
+    topics: z.array(z.string()).optional(),
     linkUrl: z.string().url().optional(),
     linkText: z.string().optional(),
     advisor: z.string().optional(),
@@ -42,6 +45,7 @@ const industry = defineCollection({
     company: z.string(),
     image: z.string(),
     dates: z.string(),
+    date: z.string(),
   }),
 });
 

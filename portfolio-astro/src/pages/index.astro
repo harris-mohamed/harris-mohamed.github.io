@@ -1,13 +1,19 @@
 ---
 import Layout from '../components/Layout.astro';
 import ProjectCard from '../components/ProjectCard.astro';
+import ResearchCard from '../components/ResearchCard.astro';
+import IndustryCard from '../components/IndustryCard.astro';
+import CourseCard from '../components/CourseCard.astro';
 import ProjectModal from '../components/ProjectModal.astro';
 import { getCollection } from 'astro:content';
 
-const projects = await getCollection('projects');
-const research = await getCollection('research');
+const projects = (await getCollection('projects'))
+  .sort((a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime());
+const research = (await getCollection('research'))
+  .sort((a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime());
 const courses = await getCollection('courses');
-const industry = await getCollection('industry');
+const industry = (await getCollection('industry'))
+  .sort((a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime());
 ---
 
 <Layout title="Harris Mohamed - Portfolio">
@@ -86,11 +92,16 @@ const industry = await getCollection('industry');
         <div class="divider-custom-icon"><i class="fas fa-bezier-curve"></i></div>
         <div class="divider-custom-line"></div>
       </div>
+      <p class="text-center mb-4">Academic research conducted during my time as a student at the University of Illinois at Urbana-Champaign and professional research carried out throughout my industry career.</p>
       <div class="row justify-content-center">
         {research.map((item, i) => (
-          <ProjectCard
+          <ResearchCard
             title={item.data.title}
             image={item.data.image}
+            date={item.data.date}
+            topics={item.data.topics}
+            linkUrl={item.data.linkUrl}
+            linkText={item.data.linkText}
             modalId={`research-${i}`}
           />
         ))}
@@ -107,15 +118,31 @@ const industry = await getCollection('industry');
         <div class="divider-custom-icon"><i class="fas fa-bezier-curve"></i></div>
         <div class="divider-custom-line"></div>
       </div>
+      <p class="text-center mb-4">Personal projects that I am extremely proud of. My best work is encompassed in these projects. Some are dumb, some are failures, but they're all great.</p>
       <div class="row justify-content-center">
-        {projects.map((project, i) => (
-          <ProjectCard
-            title={project.data.title}
-            image={project.data.image}
-            status={project.data.status}
-            modalId={`project-${i}`}
-          />
-        ))}
+        {projects.map((project, i) => {
+          // Determine badge color based on status content
+          let statusVariant = 'dark'; // default: slate gray for miscellaneous
+          if (project.data.status) {
+            const status = project.data.status.toLowerCase();
+            if (status.includes('abandoned')) {
+              statusVariant = 'danger'; // red for abandoned
+            } else if (status.includes('winner') || status.includes('completed')) {
+              statusVariant = 'success'; // dark green for winners/completions
+            }
+          }
+          return (
+            <ProjectCard
+              title={project.data.title}
+              image={project.data.image}
+              status={project.data.status}
+              date={project.data.date}
+              modalId={`project-${i}`}
+              buttonVariant="primary"
+              statusVariant={statusVariant}
+            />
+          );
+        })}
       </div>
     </div>
   </section>
@@ -129,12 +156,15 @@ const industry = await getCollection('industry');
         <div class="divider-custom-icon"><i class="fas fa-bezier-curve"></i></div>
         <div class="divider-custom-line"></div>
       </div>
+      <p class="text-center mb-4">Internships and Industry positions where I got to apply my academic skills in a professional setting.</p>
       <div class="row justify-content-center">
         {industry.map((item, i) => (
-          <ProjectCard
-            title={`${item.data.title} - ${item.data.company}`}
+          <IndustryCard
+            title={item.data.title}
+            company={item.data.company}
+            dates={item.data.dates}
+            date={item.data.date}
             image={item.data.image}
-            status={item.data.dates}
             modalId={`industry-${i}`}
           />
         ))}
@@ -181,7 +211,7 @@ const industry = await getCollection('industry');
       <h3 class="text-center text-uppercase mb-4">Graduate</h3>
       <div class="row justify-content-center">
         {courses.filter(c => c.data.level === 'Graduate').map((course, i) => (
-          <ProjectCard
+          <CourseCard
             title={course.data.title}
             image={course.data.image}
             modalId={`course-grad-${i}`}
@@ -192,7 +222,7 @@ const industry = await getCollection('industry');
       <h3 class="text-center text-uppercase mb-4 mt-5">Undergraduate</h3>
       <div class="row justify-content-center">
         {courses.filter(c => c.data.level === 'Undergraduate').map((course, i) => (
-          <ProjectCard
+          <CourseCard
             title={course.data.title}
             image={course.data.image}
             modalId={`course-undergrad-${i}`}

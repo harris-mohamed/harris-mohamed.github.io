@@ -1,5 +1,6 @@
 ---
 title: "Project LD"
+date: "2018-12-01"
 image: "ld.png"
 status: "Completed"
 description: "Project LD: FPGA-based 2D Object Tracker"

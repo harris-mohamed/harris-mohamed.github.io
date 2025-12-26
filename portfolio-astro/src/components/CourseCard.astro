@@ -1,0 +1,26 @@
+---
+interface Props {
+  title: string;
+  image: string;
+  modalId: string;
+}
+
+const { title, image, modalId } = Astro.props;
+---
+
+<div class="col-md-6 col-lg-4 mb-5 d-flex">
+  <div class="w-100 d-flex flex-column">
+    <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target={`#${modalId}`}>
+      <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+        <div class="portfolio-item-caption-content text-center text-white">
+          <i class="fas fa-plus fa-3x"></i>
+        </div>
+      </div>
+      <img class="img-fluid" src={`/images/${image}`} alt={title} style="border: 3px solid black;" />
+    </div>
+    <p class="page-section-subheading text-center mb-0 mt-2">{title}</p>
+    <div class="row justify-content-center mt-auto">
+      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target={`#${modalId}`}>Click for details</button>
+    </div>
+  </div>
+</div>

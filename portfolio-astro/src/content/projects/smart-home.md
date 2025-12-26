@@ -1,5 +1,6 @@
 ---
 title: "Smart Home"
+date: "2021-01-01"
 image: "smarthome.jpeg"
 status: "Just for fun"
 description: "Smart Home automation project"

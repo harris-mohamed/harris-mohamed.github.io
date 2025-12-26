@@ -1,5 +1,6 @@
 ---
 title: "Sentinel Prime: Real-time LIDAR point cloud FPGA-based 3D classification"
+date: "2023-01-01"
 image: "SentinelPrime.png"
 advisor: "Dr. Deming Chen"
 advisorUrl: "https://dchen.ece.illinois.edu/"

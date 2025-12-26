@@ -2,14 +2,14 @@
 interface Props {
   title: string;
   image: string;
-  status?: string;
   date: string;
+  topics?: string[];
+  linkUrl?: string;
+  linkText?: string;
   modalId: string;
-  buttonVariant?: string;
-  statusVariant?: string;
 }
 
-const { title, image, status, date, modalId, buttonVariant = 'secondary', statusVariant = 'primary' } = Astro.props;
+const { title, image, date, topics, linkUrl, linkText, modalId } = Astro.props;
 ---
 
 <div class="col-md-6 col-lg-4 mb-5 d-flex">
@@ -20,17 +20,23 @@ const { title, image, status, date, modalId, buttonVariant = 'secondary', status
           <i class="fas fa-plus fa-3x"></i>
         </div>
       </div>
-      <img class="img-fluid" src={`/images/${image}`} alt={title} style="border: 3px solid #1abc9c;" />
+      <img class="img-fluid" src={`/images/${image}`} alt={title} style="border: 3px solid black;" />
     </div>
-    {status && (
+    {topics && topics.length > 0 && (
       <div class="text-center mt-2">
-        <span class={`badge bg-${statusVariant} text-white`}>{status}</span>
+        {topics.map((topic, index) => {
+          const colors = ['bg-success', 'bg-danger', 'bg-secondary'];
+          const colorClass = colors[index % colors.length];
+          return (
+            <span class={`badge ${colorClass} me-1 mb-1`}>{topic}</span>
+          );
+        })}
       </div>
     )}
     <p class="text-center text-muted mb-0 mt-2"><small>{new Date(date).getFullYear()}</small></p>
-    <p class="page-section-subheading text-center mb-0">{title}</p>
+    <p class="page-section-subheading text-center mb-0 mt-2">{title}</p>
     <div class="row justify-content-center mt-auto">
-      <button type="button" class={`btn btn-${buttonVariant}`} data-bs-toggle="modal" data-bs-target={`#${modalId}`}>Click for details</button>
+      <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target={`#${modalId}`}>Click for details</button>
     </div>
   </div>
 </div>

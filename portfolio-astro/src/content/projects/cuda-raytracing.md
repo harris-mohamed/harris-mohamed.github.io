@@ -1,5 +1,6 @@
 ---
 title: "CUDA Ray Tracing: GPU-accelerated ray tracing renderer"
+date: "2019-12-01"
 image: "cuda.png"
 status: "Class Final - Completed"
 description: "High-performance ray tracing renderer implemented in CUDA for ECE 408."

@@ -1,5 +1,6 @@
 ---
 title: "Software Development Engineer II"
+date: "2021-08-01"
 company: "Kratos Defense & Security Solutions"
 image: "kratos.png"
 dates: "2021 - Present"

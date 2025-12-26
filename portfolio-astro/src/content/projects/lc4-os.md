@@ -1,5 +1,6 @@
 ---
 title: "LC-4 Operating System"
+date: "2019-12-01"
 image: "penguin.jpg"
 status: "Completed"
 description: "LC-4 OS: Operating System developed from scratch in a small group"

@@ -1,5 +1,6 @@
 ---
 title: "System Design/Architecture Engineering Intern"
+date: "2019-06-01"
 company: "Kratos Defense & Security Solutions"
 image: "kratos.png"
 dates: "Summer 2019"

@@ -1,5 +1,6 @@
 ---
 title: "OCR & Dyslexia"
+date: "2018-04-01"
 image: "test2.jpg"
 status: "Competition"
 description: "OCR & Dyslexia assistive technology"

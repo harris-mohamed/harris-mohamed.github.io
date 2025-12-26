@@ -1,5 +1,6 @@
 ---
 title: "S.T.E.V.E."
+date: "2017-05-01"
 image: "steve.jpg"
 status: "Class Final"
 description: "S.T.E.V.E. - Custom drone built for natural disaster relief"

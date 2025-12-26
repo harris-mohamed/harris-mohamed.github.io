@@ -1,5 +1,6 @@
 ---
 title: "Sentinel: Real-time LIDAR Classification System"
+date: "2022-01-01"
 image: "Sentinel.jpg"
 linkUrl: "https://example.com/sentinel-paper"
 linkText: "View Publication"
