@@ -8,6 +8,7 @@ const projects = defineCollection({
     status: z.string().optional(),
     description: z.string(),
     date: z.string(),
+    priority: z.number(),
     videoUrl: z.string().url().optional(),
     githubUrl: z.string().url().optional(),
     tags: z.array(z.string()).optional(),
@@ -49,4 +50,15 @@ const industry = defineCollection({
   }),
 });
 
-export const collections = { projects, research, courses, industry };
+const teaching = defineCollection({
+  type: 'content',
+  schema: z.object({
+    title: z.string(),
+    course: z.string(),
+    image: z.string(),
+    dates: z.string(),
+    date: z.string(),
+  }),
+});
+
+export const collections = { projects, research, courses, industry, teaching };

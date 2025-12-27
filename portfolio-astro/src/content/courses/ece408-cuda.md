@@ -1,7 +1,7 @@
 ---
 title: "ECE 408 - Applied Parallel Programming"
 level: "Undergraduate"
-image: "cuda.png"
+image: "408.jpg"
 description: "Introduction to parallel programming using CUDA for GPU acceleration"
 ---
 

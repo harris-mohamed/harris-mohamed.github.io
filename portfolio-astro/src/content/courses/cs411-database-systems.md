@@ -1,7 +1,7 @@
 ---
 title: "CS 411 - Database Systems"
 level: "Graduate"
-image: "database.jpg"
+image: "database.png"
 description: "SQL, PostgreSQL, MongoDB, and Neo4j databases"
 ---
 

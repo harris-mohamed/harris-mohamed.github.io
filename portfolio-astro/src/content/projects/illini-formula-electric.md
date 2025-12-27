@@ -4,6 +4,7 @@ date: "2018-08-01"
 image: "car.jpg"
 status: "Club"
 description: "DAQA leader for Illini Formula Electric"
+priority: 13
 tags: ["Formula SAE", "Data Acquisition", "Embedded Systems", "PCB Design", "Raspberry Pi", "CAN Bus"]
 ---
 

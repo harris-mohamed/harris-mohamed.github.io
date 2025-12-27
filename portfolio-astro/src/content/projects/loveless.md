@@ -4,6 +4,7 @@ date: "2020-06-01"
 image: "ye.jpg"
 status: "Abandoned"
 description: "Project Loveless: An experiment in understanding text messages"
+priority: 2
 tags: ["AI", "NLP", "Sentiment Analysis", "Text Analysis", "Just for fun"]
 ---
 

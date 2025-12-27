@@ -1,7 +1,7 @@
 ---
 title: "ECE 448 - Introduction to Artificial Intelligence"
 level: "Undergraduate"
-image: "artificial-intelligence.jpg"
+image: "448.jpg"
 description: "AI fundamentals including search, classification, machine learning, PyTorch, computer vision, and NLP"
 ---
 

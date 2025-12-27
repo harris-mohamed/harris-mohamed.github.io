@@ -4,6 +4,7 @@ date: "2019-08-01"
 image: "watchdog.PNG"
 status: "Completed"
 description: "Project Watchdog: FPGA-based smart home security camera"
+priority: 9
 tags: ["FPGA", "Edge AI", "Computer Vision", "Security", "Competition"]
 ---
 

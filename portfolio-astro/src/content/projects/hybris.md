@@ -4,6 +4,7 @@ date: "2020-03-01"
 image: "OpenAI.jpg"
 status: "Completed"
 description: "Hybris: An experiment in text generation"
+priority: 4
 tags: ["AI", "GPT-2", "NLP", "Text Generation", "Machine Learning"]
 ---
 

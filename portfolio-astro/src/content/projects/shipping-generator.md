@@ -4,6 +4,7 @@ date: "2016-01-01"
 image: "test3.jpg"
 status: "Just for fun"
 description: "Shipping Generator web application"
+priority: 16
 tags: ["JavaScript", "HTML", "CSS", "Web Development", "Just for fun"]
 ---
 

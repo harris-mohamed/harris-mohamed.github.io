@@ -1,7 +1,7 @@
 ---
 title: "ECE 411 - Computer Organization and Design"
 level: "Undergraduate"
-image: "computer-architecture.jpg"
+image: "411.jpg"
 description: "Implemented a RISC-V CPU in SystemVerilog covering pipelining, memory organization, I/O design, and reliability evaluation"
 ---
 

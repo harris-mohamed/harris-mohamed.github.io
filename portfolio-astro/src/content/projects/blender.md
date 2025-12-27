@@ -4,6 +4,7 @@ date: "2020-01-01"
 image: "trees_4k.png"
 status: "Just for fun"
 description: "Blender 3D modeling and rendering projects"
+priority: 6
 videoUrl: "https://www.youtube.com/embed/7_lretN-ymk"
 tags: ["3D Modeling", "Blender", "VFX", "Animation", "Rendering"]
 ---

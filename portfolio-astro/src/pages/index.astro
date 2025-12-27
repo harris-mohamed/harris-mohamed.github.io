@@ -3,16 +3,19 @@ import Layout from '../components/Layout.astro';
 import ProjectCard from '../components/ProjectCard.astro';
 import ResearchCard from '../components/ResearchCard.astro';
 import IndustryCard from '../components/IndustryCard.astro';
+import TeachingCard from '../components/TeachingCard.astro';
 import CourseCard from '../components/CourseCard.astro';
 import ProjectModal from '../components/ProjectModal.astro';
 import { getCollection } from 'astro:content';
 
 const projects = (await getCollection('projects'))
-  .sort((a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime());
+  .sort((a, b) => a.data.priority - b.data.priority);
 const research = (await getCollection('research'))
   .sort((a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime());
 const courses = await getCollection('courses');
 const industry = (await getCollection('industry'))
+  .sort((a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime());
+const teaching = (await getCollection('teaching'))
   .sort((a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime());
 ---
 
@@ -166,6 +169,7 @@ const industry = (await getCollection('industry'))
             date={item.data.date}
             image={item.data.image}
             modalId={`industry-${i}`}
+            datesVariant={i % 2 === 0 ? 'dark' : 'success'}
           />
         ))}
       </div>
@@ -182,18 +186,17 @@ const industry = (await getCollection('industry'))
         <div class="divider-custom-line"></div>
       </div>
       <div class="row justify-content-center">
-        <div class="col-lg-8">
-          <div class="text-center">
-            <h3 class="text-uppercase mb-4">ECE 385: Digital Systems Lab</h3>
-            <p class="lead mb-4">Undergraduate Course Assistant</p>
-            <img class="img-fluid mb-4" src="/images/385-final.jpg" alt="ECE 385 course project" style="max-width: 400px;" />
-            <p class="mb-0">
-              Served as an Undergraduate Course Assistant for ECE 385: Digital Systems Lab,
-              helping students with FPGA programming using SystemVerilog and providing
-              guidance on digital design projects.
-            </p>
-          </div>
-        </div>
+        {teaching.map((item, i) => (
+          <TeachingCard
+            title={item.data.title}
+            course={item.data.course}
+            dates={item.data.dates}
+            date={item.data.date}
+            image={item.data.image}
+            modalId={`teaching-${i}`}
+            datesVariant={i % 2 === 0 ? 'dark' : 'success'}
+          />
+        ))}
       </div>
     </div>
   </section>
@@ -214,7 +217,9 @@ const industry = (await getCollection('industry'))
           <CourseCard
             title={course.data.title}
             image={course.data.image}
+            level={course.data.level}
             modalId={`course-grad-${i}`}
+            levelVariant="dark"
           />
         ))}
       </div>
@@ -225,7 +230,9 @@ const industry = (await getCollection('industry'))
           <CourseCard
             title={course.data.title}
             image={course.data.image}
+            level={course.data.level}
             modalId={`course-undergrad-${i}`}
+            levelVariant="success"
           />
         ))}
       </div>
@@ -294,6 +301,19 @@ const industry = (await getCollection('industry'))
       <ProjectModal
         id={`industry-${i}`}
         title={`${item.data.title} - ${item.data.company}`}
+      >
+        <Content />
+      </ProjectModal>
+    );
+  })}
+
+  <!-- Teaching Modals -->
+  {teaching.map(async (item, i) => {
+    const { Content } = await item.render();
+    return (
+      <ProjectModal
+        id={`teaching-${i}`}
+        title={`${item.data.title} - ${item.data.course}`}
       >
         <Content />
       </ProjectModal>

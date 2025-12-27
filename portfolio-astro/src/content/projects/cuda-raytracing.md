@@ -4,6 +4,7 @@ date: "2019-12-01"
 image: "cuda.png"
 status: "Class Final - Completed"
 description: "High-performance ray tracing renderer implemented in CUDA for ECE 408."
+priority: 8
 githubUrl: "https://github.com/harris-mohamed/cuda-raytracing"
 tags: ["CUDA", "Graphics", "GPU"]
 ---

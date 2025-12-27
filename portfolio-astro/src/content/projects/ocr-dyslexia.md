@@ -4,6 +4,7 @@ date: "2018-04-01"
 image: "test2.jpg"
 status: "Competition"
 description: "OCR & Dyslexia assistive technology"
+priority: 14
 tags: ["OCR", "Eye Tracking", "Accessibility", "C#", "Competition"]
 ---
 

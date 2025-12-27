@@ -1,7 +1,7 @@
 ---
 title: "ECE 385 - Digital Systems Lab"
 level: "Undergraduate"
-image: "fpga.jpg"
+image: "385.jpg"
 description: "FPGA programming using SystemVerilog. Implemented a match moving algorithm using a camera and an FPGA"
 ---
 

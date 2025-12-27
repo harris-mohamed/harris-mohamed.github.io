@@ -1,7 +1,7 @@
 ---
 title: "ECE 310/311 - Digital Signal Processing"
 level: "Undergraduate"
-image: "dsp.jpg"
+image: "310.png"
 description: "DSP theory including DTFT, Z-transform, sampling theory, with Python visualization lab"
 ---
 

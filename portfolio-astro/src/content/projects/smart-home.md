@@ -4,6 +4,7 @@ date: "2021-01-01"
 image: "smarthome.jpeg"
 status: "Just for fun"
 description: "Smart Home automation project"
+priority: 0
 tags: ["Smart Home", "IoT", "AI", "Home Automation", "Just for fun"]
 ---
 

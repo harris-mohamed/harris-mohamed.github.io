@@ -1,7 +1,7 @@
 ---
 title: "CS 498 - Internet of Things"
 level: "Undergraduate"
-image: "iot-devices.jpg"
+image: "IOT.png"
 description: "IoT device programming (Arduino, Raspberry Pi), protocol stacks (Zigbee, 5G, MQTT), and AWS IoT platform"
 ---
 

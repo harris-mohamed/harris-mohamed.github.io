@@ -3,9 +3,11 @@ interface Props {
   title: string;
   image: string;
   modalId: string;
+  level: string;
+  levelVariant?: string;
 }
 
-const { title, image, modalId } = Astro.props;
+const { title, image, modalId, level, levelVariant = 'info' } = Astro.props;
 ---
 
 <div class="col-md-6 col-lg-4 mb-5 d-flex">
@@ -18,9 +20,12 @@ const { title, image, modalId } = Astro.props;
       </div>
       <img class="img-fluid" src={`/images/${image}`} alt={title} style="border: 3px solid black;" />
     </div>
+    <div class="text-center mt-2">
+      <span class={`badge bg-${levelVariant}`}>{level}</span>
+    </div>
     <p class="page-section-subheading text-center mb-0 mt-2">{title}</p>
     <div class="row justify-content-center mt-auto">
-      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target={`#${modalId}`}>Click for details</button>
+      <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target={`#${modalId}`}>Click for details</button>
     </div>
   </div>
 </div>

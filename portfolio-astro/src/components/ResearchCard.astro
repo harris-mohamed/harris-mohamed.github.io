@@ -33,7 +33,6 @@ const { title, image, date, topics, linkUrl, linkText, modalId } = Astro.props;
         })}
       </div>
     )}
-    <p class="text-center text-muted mb-0 mt-2"><small>{new Date(date).getFullYear()}</small></p>
     <p class="page-section-subheading text-center mb-0 mt-2">{title}</p>
     <div class="row justify-content-center mt-auto">
       <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target={`#${modalId}`}>Click for details</button>

@@ -1,7 +1,7 @@
 ---
 title: "CS 498 - Cloud Computing Applications"
 level: "Graduate"
-image: "cloud-computing.jpg"
+image: "408.jpg"
 description: "Cloud infrastructure and scaling using AWS EC2s, Hadoop, Spark, and ETL pipelines"
 ---
 

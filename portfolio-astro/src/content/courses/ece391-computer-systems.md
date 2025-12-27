@@ -1,7 +1,7 @@
 ---
 title: "ECE 391 - Computer Systems Engineering"
 level: "Undergraduate"
-image: "operating-systems.jpg"
+image: "391-os.png"
 description: "Built a Linux-like operating system from scratch with filesystem, interrupts, paging, and multitasking scheduler"
 ---
 

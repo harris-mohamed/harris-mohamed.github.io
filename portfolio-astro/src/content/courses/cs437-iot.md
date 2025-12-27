@@ -1,7 +1,7 @@
 ---
 title: "CS 437 - Internet of Things"
 level: "Graduate"
-image: "iot.jpg"
+image: "IOT.png"
 description: "IoT fundamentals from network stacks to common protocols with AWS services"
 ---
 
