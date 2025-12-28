@@ -163,3 +163,43 @@ The website highlights Harris Mohamed's work in:
 **Update social links**: Edit footer social icons (line 86-89)
 
 **Change color scheme**: Modify Bootstrap variables in `css/styles.css`
+
+## Content Scaffolding Commands (Astro Site)
+
+The repository includes custom Claude Code slash commands to quickly scaffold new content entries for the **Astro-based portfolio** (`portfolio-astro/`):
+
+### Available Commands
+
+- **`/add-research`** - Create new research publication entry
+  - Prompts for: title, date, image, topics, links, advisor info
+  - Creates: `portfolio-astro/src/content/research/{title-kebab}.md`
+
+- **`/add-project`** - Create new personal project entry
+  - Prompts for: title, description, date, priority, image, status, URLs, tags
+  - Creates: `portfolio-astro/src/content/projects/{title-kebab}.md`
+
+- **`/add-industry`** - Create new industry experience entry
+  - Prompts for: job title, company, dates, image
+  - Creates: `portfolio-astro/src/content/industry/{company}-{role}-{year}.md`
+
+- **`/add-course`** - Create new academic course entry
+  - Prompts for: course title, level (Graduate/Undergraduate), description, image
+  - Creates: `portfolio-astro/src/content/courses/{course-code}-{short-name}.md`
+
+### Command Usage
+
+All commands use **interactive prompts** to gather required information and generate properly formatted markdown files with:
+- Valid YAML frontmatter matching content schemas
+- Placeholder content sections to fill in
+- Helpful confirmation messages and next steps
+
+For detailed documentation, see: `.claude/commands/README.md`
+
+### Workflow After Adding Content
+
+1. Verify image exists in `portfolio-astro/public/images/`
+2. Edit generated markdown file to fill in placeholder sections
+3. Run `npm run dev` in `portfolio-astro/` to preview changes
+4. Commit and push the new content file to git
+
+These commands work with the **Astro site only** (`portfolio-astro/`), not the legacy HTML site (`index.html`).
