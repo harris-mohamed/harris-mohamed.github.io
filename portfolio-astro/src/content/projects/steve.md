@@ -31,6 +31,6 @@ This is also not flight essential hardware and was supported by the Raspberry Pi
 
 One fundamental aspect of a drone is to not fly into nearby objects. Real drones use laser-detection to detect nearby objects, but those sensors are expensive and difficult to get working so we chose to use inexpensive ultrasonic sensors. Our end goal was to have 6 sensors in each axis, 3 in each direction (for instance, we would have 3 pointing directly upwards and 3 pointing directly downwards, thus covering the z-axis). We used a MUX shield, which adds 37 additional inputs to the Arduino and we ended up writing our own custom drivers to capture the ultrasonic values (it turns out provided library functions start to fail when you try to use an external shield). The driver code worked perfectly fine, but due to time constraints we were not able to interface it with the rest of the drone. We were able to add an off-the-shelf GPS module, which was capable of logging the drone's coordinates. Combined with the ultrasonic sensors, we were able to show that we could capture coordinates in 3-dimensions.
 
-![GPS output visualized](/images/steve-map.png)
+![GPS output visualized](/images/steve-map.jpg)
 
 Even though we were not able to meet all of the goals we set for the project, we consider STEVE an incredible success.
