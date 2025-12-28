@@ -36,7 +36,7 @@ const teaching = (await getCollection('teaching'))
           <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#industry">Industry</a></li>
           <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#teaching">Teaching</a></li>
           <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#coursework">Coursework</a></li>
-          <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="https://drive.google.com/file/d/1RG1WF9OozKJB8XIzDVneYzssl3Ht1mAr/view?usp=drive_link" target="_blank">Resume</a></li>
+          <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#resume">Resume</a></li>
         </ul>
       </div>
     </div>
@@ -176,8 +176,57 @@ const teaching = (await getCollection('teaching'))
     </div>
   </section>
 
+  <!-- Resume Section -->
+  <section class="page-section bg-secondary text-white" id="resume">
+    <div class="container">
+      <h2 class="page-section-heading text-center text-uppercase text-white mb-0">Resume</h2>
+      <div class="divider-custom divider-light">
+        <div class="divider-custom-line"></div>
+        <div class="divider-custom-icon"><i class="fas fa-bezier-curve"></i></div>
+        <div class="divider-custom-line"></div>
+      </div>
+      <p class="text-center mb-4">View my complete professional resume below or download a copy for offline viewing.</p>
+
+      <!-- PDF Viewer Container -->
+      <div class="row justify-content-center">
+        <div class="col-lg-10">
+          <!-- Desktop/Tablet: Full PDF viewer -->
+          <div class="d-none d-md-block">
+            <iframe
+              src="/documents/resume.pdf"
+              type="application/pdf"
+              title="Harris Mohamed Resume"
+              aria-label="Embedded PDF viewer showing Harris Mohamed's resume"
+              style="border: 3px solid #1abc9c; border-radius: 0.5rem; width: 100%; height: 85vh; min-height: 800px;"
+            >
+              <p>Your browser does not support embedded PDFs. Please <a href="/documents/resume.pdf" download="Harris_Mohamed_Resume.pdf" class="text-primary">download the PDF</a> to view.</p>
+            </iframe>
+          </div>
+
+          <!-- Mobile: Message encouraging download -->
+          <div class="d-block d-md-none text-center">
+            <p class="mb-4"><i class="fas fa-mobile-alt fa-3x mb-3"></i></p>
+            <p>For the best viewing experience on mobile devices, please download the resume using the button below.</p>
+          </div>
+
+          <!-- Download Button -->
+          <div class="text-center mt-4">
+            <a
+              href="/documents/resume.pdf"
+              download="Harris_Mohamed_Resume.pdf"
+              class="btn btn-primary btn-xl"
+            >
+              <i class="fas fa-download me-2"></i>
+              Download Resume (PDF)
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- Teaching Section -->
-  <section class="page-section portfolio bg-secondary text-white" id="teaching">
+  <section class="page-section portfolio bg-primary text-white" id="teaching">
     <div class="container">
       <h2 class="page-section-heading text-center text-uppercase text-white mb-0">Teaching Experience</h2>
       <div class="divider-custom divider-light">
@@ -202,7 +251,7 @@ const teaching = (await getCollection('teaching'))
   </section>
 
   <!-- Coursework Section -->
-  <section class="page-section portfolio bg-primary text-white" id="coursework">
+  <section class="page-section portfolio bg-secondary text-white" id="coursework">
     <div class="container">
       <h2 class="page-section-heading text-center text-uppercase text-white mb-0">Relevant Coursework</h2>
       <div class="divider-custom divider-light">
@@ -240,7 +289,7 @@ const teaching = (await getCollection('teaching'))
   </section>
 
   <!-- Footer -->
-  <footer class="footer text-center bg-secondary text-white">
+  <footer class="footer text-center bg-primary text-white">
     <div class="container">
       <div class="row">
         <div class="col-lg-12 mb-5 mb-lg-0">

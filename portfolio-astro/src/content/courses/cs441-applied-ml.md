@@ -1,7 +1,7 @@
 ---
 title: "CS 441 - Applied Machine Learning"
 level: "Graduate"
-image: "408.jpg"
+image: "441.jpg"
 description: "Machine learning fundamentals including CNNs, SVM, clustering, and neural networks"
 ---
 

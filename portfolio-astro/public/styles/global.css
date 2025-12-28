@@ -340,3 +340,8 @@ html {
 .text-sm {
   font-size: 0.9rem;
 }
+
+/* Resume Section - PDF Viewer Styling */
+#resume iframe {
+  background: #fff;
+}

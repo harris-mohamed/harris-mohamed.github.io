@@ -18,14 +18,14 @@ const { title, image, modalId, level, levelVariant = 'info' } = Astro.props;
           <i class="fas fa-plus fa-3x"></i>
         </div>
       </div>
-      <img class="img-fluid" src={`/images/${image}`} alt={title} style="border: 3px solid black;" />
+      <img class="img-fluid" src={`/images/${image}`} alt={title} style="border: 3px solid #1abc9c;" />
     </div>
     <div class="text-center mt-2">
       <span class={`badge bg-${levelVariant}`}>{level}</span>
     </div>
     <p class="page-section-subheading text-center mb-0 mt-2">{title}</p>
-    <div class="row justify-content-center mt-auto">
-      <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target={`#${modalId}`}>Click for details</button>
+    <div class="row justify-content-center mt-auto pt-1">
+      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target={`#${modalId}`}>Click for details</button>
     </div>
   </div>
 </div>
