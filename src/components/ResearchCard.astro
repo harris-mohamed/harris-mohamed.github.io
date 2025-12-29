@@ -1,0 +1,43 @@
+---
+interface Props {
+  title: string;
+  image: string;
+  date: string;
+  topics?: string[];
+  linkUrl?: string;
+  linkText?: string;
+  modalId: string;
+}
+
+const { title, image, date, topics, linkUrl, linkText, modalId } = Astro.props;
+---
+
+<div class="col-md-6 col-lg-4 mb-5 d-flex">
+  <div class="w-100 d-flex flex-column">
+    <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target={`#${modalId}`}>
+      <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+        <div class="portfolio-item-caption-content text-center text-white">
+          <i class="fas fa-plus fa-3x"></i>
+        </div>
+      </div>
+      <img class="img-fluid" src={`/images/${image}`} alt={title} style="border: 3px solid black;" />
+    </div>
+    {topics && topics.length > 0 && (
+      <div class="text-center mt-2">
+        {topics.length > 0 && <span class="badge bg-success text-white me-1">{topics[0]}</span>}
+        {topics.length > 1 && <span class="text-white mx-1">|</span>}
+        {topics.length > 1 && topics.slice(1).map((topic, index) => {
+          const colors = ['bg-danger', 'bg-info', 'bg-warning', 'bg-dark'];
+          const colorClass = colors[index % colors.length];
+          return (
+            <span class={`badge ${colorClass} text-white me-1 mb-1`}>{topic}</span>
+          );
+        })}
+      </div>
+    )}
+    <p class="page-section-subheading text-center mb-0 mt-2">{title}</p>
+    <div class="row justify-content-center mt-auto pt-1">
+      <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target={`#${modalId}`}>Click for details</button>
+    </div>
+  </div>
+</div>

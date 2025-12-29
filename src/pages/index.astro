@@ -1,0 +1,397 @@
+---
+import Layout from '../components/Layout.astro';
+import ProjectCard from '../components/ProjectCard.astro';
+import ResearchCard from '../components/ResearchCard.astro';
+import IndustryCard from '../components/IndustryCard.astro';
+import TeachingCard from '../components/TeachingCard.astro';
+import CourseCard from '../components/CourseCard.astro';
+import ProjectModal from '../components/ProjectModal.astro';
+import { getCollection } from 'astro:content';
+
+const projects = (await getCollection('projects'))
+  .sort((a, b) => a.data.priority - b.data.priority);
+const research = (await getCollection('research'))
+  .sort((a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime());
+const courses = await getCollection('courses');
+const industry = (await getCollection('industry'))
+  .sort((a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime());
+const teaching = (await getCollection('teaching'))
+  .sort((a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime());
+---
+
+<Layout title="Harris Mohamed - Portfolio">
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand js-scroll-trigger" href="#page-top">Harris Mohamed</a>
+      <button class="navbar-toggler navbar-toggler-right text-uppercase font-weight-bold bg-primary text-white rounded" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        Menu
+        <i class="fas fa-bars"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#about">About</a></li>
+          <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#research">Research</a></li>
+          <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#projects">Projects</a></li>
+          <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#industry">Industry</a></li>
+          <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#resume">Resume</a></li>
+          <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#teaching">Teaching</a></li>
+          <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#coursework">Coursework</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Masthead -->
+  <header class="masthead bg-primary text-white text-center">
+    <div class="container d-flex align-items-center flex-column">
+      <img class="masthead-avatar mb-5 rounded-circle object-fit-cover aspect-ratio-square" src="/images/headshot.jpg" alt="Harris Mohamed" />
+      <h1 class="masthead-heading text-uppercase mb-0">Harris Mohamed</h1>
+      <div class="divider-custom divider-light">
+        <div class="divider-custom-line"></div>
+        <div class="divider-custom-icon"><i class="fas fa-bezier-curve"></i></div>
+        <div class="divider-custom-line"></div>
+      </div>
+      <p class="masthead-subheading font-weight-light mb-0">UIUC 2021 - BS in Computer Engineering</p>
+      <p class="masthead-subheading font-weight-light mb-0">UIUC 2025 - MSc in Computer Science</p>
+      <br />
+      <p class="font-weight-light mb-0"><em>Creativity is intelligence having fun</em> - Albert Einstein</p>
+    </div>
+  </header>
+
+  <!-- About Section -->
+  <section class="page-section bg-secondary text-white mb-0 about" id="about">
+    <div class="container">
+      <h2 class="page-section-heading text-center text-uppercase text-white">About</h2>
+      <div class="divider-custom divider-light">
+        <div class="divider-custom-line"></div>
+        <div class="divider-custom-icon"><i class="fas fa-bezier-curve"></i></div>
+        <div class="divider-custom-line"></div>
+      </div>
+      <p class="masthead-subheading font-weight-light mb-0">
+        Hello! I'm Harris. I have a Bachelor's Degree in Computer Engineering and a Master of Computer Science both from the
+        University of Illinois at Urbana-Champaign. I have completed several internships in industry and am currently
+        employed at Kratos Defense and Security Solutions. At Kratos, I apply advanced AI/ML techniques to RF data from our
+        global sensor network to enhance Space Domain Awareness (SDA) areas including but not limited to satellite tracking,
+        signal pattern-of-life, and satcom analysis. In my spare time, I pursue creative and technical efforts, such as
+        filmmaking and vertical farming.
+      </p>
+      <div class="align-items-center text-center">
+        <br />
+        <a class="btn btn-outline-light btn-social mx-1" href="mailto:hmoham25@illinois.edu" target="_blank"><i class="fas fa-fw fa-envelope-square"></i></a>
+        <a class="btn btn-outline-light btn-social mx-1" href="https://www.linkedin.com/in/harris-mohamed/" target="_blank"><i class="fab fa-fw fa-linkedin-in"></i></a>
+        <a class="btn btn-outline-light btn-social mx-1" href="https://github.com/harris-mohamed" target="_blank"><i class="fab fa-fw fa-github"></i></a>
+        <a class="btn btn-outline-light btn-social mx-1" href="https://www.youtube.com/channel/UCnbbYTClnEvzT_RWaMbW9LQ" target="_blank"><i class="fab fa-fw fa-youtube"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Research Section -->
+  <section class="page-section portfolio bg-primary text-white" id="research">
+    <div class="container">
+      <h2 class="page-section-heading text-center text-uppercase text-white mb-0">Research</h2>
+      <div class="divider-custom divider-light">
+        <div class="divider-custom-line"></div>
+        <div class="divider-custom-icon"><i class="fas fa-bezier-curve"></i></div>
+        <div class="divider-custom-line"></div>
+      </div>
+      <p class="text-center mb-4">Academic research conducted during my time as a student at the University of Illinois at Urbana-Champaign and professional research carried out throughout my industry career.</p>
+      <div class="row justify-content-center">
+        {research.map((item, i) => (
+          <ResearchCard
+            title={item.data.title}
+            image={item.data.image}
+            date={item.data.date}
+            topics={item.data.topics}
+            linkUrl={item.data.linkUrl}
+            linkText={item.data.linkText}
+            modalId={`research-${i}`}
+          />
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section class="page-section portfolio bg-secondary text-white" id="projects">
+    <div class="container">
+      <h2 class="page-section-heading text-center text-uppercase text-white mb-0">Personal Projects</h2>
+      <div class="divider-custom divider-light">
+        <div class="divider-custom-line"></div>
+        <div class="divider-custom-icon"><i class="fas fa-bezier-curve"></i></div>
+        <div class="divider-custom-line"></div>
+      </div>
+      <p class="text-center mb-4">Personal projects that I am extremely proud of. My best work is encompassed in these projects. Some are dumb, some are failures, but they're all great.</p>
+      <div class="row justify-content-center">
+        {projects.map((project, i) => {
+          // Determine badge color based on status content
+          let statusVariant = 'dark'; // default: slate gray for miscellaneous
+          if (project.data.status) {
+            const status = project.data.status.toLowerCase();
+            if (status.includes('abandoned')) {
+              statusVariant = 'danger'; // red for abandoned
+            } else if (status.includes('winner') || status.includes('completed')) {
+              statusVariant = 'success'; // dark green for winners/completions
+            }
+          }
+          return (
+            <ProjectCard
+              title={project.data.title}
+              image={project.data.image}
+              status={project.data.status}
+              date={project.data.date}
+              modalId={`project-${i}`}
+              buttonVariant="primary"
+              statusVariant={statusVariant}
+              tags={project.data.tags}
+            />
+          );
+        })}
+      </div>
+    </div>
+  </section>
+
+  <!-- Industry Section -->
+  <section class="page-section portfolio bg-primary text-white" id="industry">
+    <div class="container">
+      <h2 class="page-section-heading text-center text-uppercase text-white mb-0">Industry Experience</h2>
+      <div class="divider-custom divider-light">
+        <div class="divider-custom-line"></div>
+        <div class="divider-custom-icon"><i class="fas fa-bezier-curve"></i></div>
+        <div class="divider-custom-line"></div>
+      </div>
+      <p class="text-center mb-4">Internships and Industry positions where I got to apply my academic skills in a professional setting.</p>
+      <div class="row justify-content-center">
+        {industry.map((item, i) => (
+          <IndustryCard
+            title={item.data.title}
+            company={item.data.company}
+            dates={item.data.dates}
+            date={item.data.date}
+            image={item.data.image}
+            modalId={`industry-${i}`}
+            datesVariant={i % 2 === 0 ? 'dark' : 'success'}
+          />
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Resume Section -->
+  <section class="page-section bg-secondary text-white" id="resume">
+    <div class="container">
+      <h2 class="page-section-heading text-center text-uppercase text-white mb-0">Resume</h2>
+      <div class="divider-custom divider-light">
+        <div class="divider-custom-line"></div>
+        <div class="divider-custom-icon"><i class="fas fa-bezier-curve"></i></div>
+        <div class="divider-custom-line"></div>
+      </div>
+      <p class="text-center mb-4">View my complete professional resume below or download a copy for offline viewing.</p>
+
+      <!-- PDF Viewer Container -->
+      <div class="row justify-content-center">
+        <div class="col-lg-10">
+          <!-- Desktop/Tablet: Full PDF viewer -->
+          <div class="d-none d-md-block">
+            <iframe
+              src="/documents/resume.pdf"
+              type="application/pdf"
+              title="Harris Mohamed Resume"
+              aria-label="Embedded PDF viewer showing Harris Mohamed's resume"
+              style="border: 3px solid #1abc9c; border-radius: 0.5rem; width: 100%; height: 85vh; min-height: 800px;"
+            >
+              <p>Your browser does not support embedded PDFs. Please <a href="/documents/resume.pdf" download="Harris_Mohamed_Resume.pdf" class="text-primary">download the PDF</a> to view.</p>
+            </iframe>
+          </div>
+
+          <!-- Mobile: Message encouraging download -->
+          <div class="d-block d-md-none text-center">
+            <p class="mb-4"><i class="fas fa-mobile-alt fa-3x mb-3"></i></p>
+            <p>For the best viewing experience on mobile devices, please download the resume using the button below.</p>
+          </div>
+
+          <!-- Download Button -->
+          <div class="text-center mt-4">
+            <a
+              href="/documents/resume.pdf"
+              download="Harris_Mohamed_Resume.pdf"
+              class="btn btn-primary btn-xl"
+            >
+              <i class="fas fa-download me-2"></i>
+              Download Resume (PDF)
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Teaching Section -->
+  <section class="page-section portfolio bg-primary text-white" id="teaching">
+    <div class="container">
+      <h2 class="page-section-heading text-center text-uppercase text-white mb-0">Teaching Experience</h2>
+      <div class="divider-custom divider-light">
+        <div class="divider-custom-line"></div>
+        <div class="divider-custom-icon"><i class="fas fa-bezier-curve"></i></div>
+        <div class="divider-custom-line"></div>
+      </div>
+      <div class="row justify-content-center">
+        {teaching.map((item, i) => (
+          <TeachingCard
+            title={item.data.title}
+            course={item.data.course}
+            dates={item.data.dates}
+            date={item.data.date}
+            image={item.data.image}
+            modalId={`teaching-${i}`}
+            datesVariant={i % 2 === 0 ? 'dark' : 'success'}
+          />
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Coursework Section -->
+  <section class="page-section portfolio bg-secondary text-white" id="coursework">
+    <div class="container">
+      <h2 class="page-section-heading text-center text-uppercase text-white mb-0">Relevant Coursework</h2>
+      <div class="divider-custom divider-light">
+        <div class="divider-custom-line"></div>
+        <div class="divider-custom-icon"><i class="fas fa-bezier-curve"></i></div>
+        <div class="divider-custom-line"></div>
+      </div>
+
+      <h3 class="text-center text-uppercase mb-4">Graduate</h3>
+      <div class="row justify-content-center">
+        {courses.filter(c => c.data.level === 'Graduate').map((course, i) => (
+          <CourseCard
+            title={course.data.title}
+            image={course.data.image}
+            level={course.data.level}
+            modalId={`course-grad-${i}`}
+            levelVariant="dark"
+          />
+        ))}
+      </div>
+
+      <h3 class="text-center text-uppercase mb-4 mt-5">Undergraduate</h3>
+      <div class="row justify-content-center">
+        {courses.filter(c => c.data.level === 'Undergraduate').map((course, i) => (
+          <CourseCard
+            title={course.data.title}
+            image={course.data.image}
+            level={course.data.level}
+            modalId={`course-undergrad-${i}`}
+            levelVariant="success"
+          />
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer text-center bg-primary text-white">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 mb-5 mb-lg-0">
+          <h4 class="text-uppercase mb-4">Around the Web</h4>
+          <a class="btn btn-outline-light btn-social mx-1" href="mailto:hmoham25@illinois.edu" target="_blank"><i class="fas fa-fw fa-envelope-square"></i></a>
+          <a class="btn btn-outline-light btn-social mx-1" href="https://www.linkedin.com/in/harris-mohamed/" target="_blank"><i class="fab fa-fw fa-linkedin-in"></i></a>
+          <a class="btn btn-outline-light btn-social mx-1" href="https://github.com/harris-mohamed" target="_blank"><i class="fab fa-fw fa-github"></i></a>
+          <a class="btn btn-outline-light btn-social mx-1" href="https://www.youtube.com/channel/UCnbbYTClnEvzT_RWaMbW9LQ" target="_blank"><i class="fab fa-fw fa-youtube"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Copyright Section -->
+  <div class="copyright py-4 text-center text-white">
+    <div class="container"><small>Copyright &copy; Harris Mohamed 2025</small></div>
+  </div>
+
+  <!-- Research Modals -->
+  {research.map(async (item, i) => {
+    const { Content } = await item.render();
+    return (
+      <ProjectModal
+        id={`research-${i}`}
+        title={item.data.title}
+      >
+        <Content />
+        {item.data.linkUrl && (
+          <p class="mt-4">
+            <a href={item.data.linkUrl} target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+              {item.data.linkText || 'View Publication'}
+            </a>
+          </p>
+        )}
+      </ProjectModal>
+    );
+  })}
+
+  <!-- Project Modals -->
+  {projects.map(async (project, i) => {
+    const { Content } = await project.render();
+    return (
+      <ProjectModal
+        id={`project-${i}`}
+        title={project.data.title}
+        videoUrl={project.data.videoUrl}
+        githubUrl={project.data.githubUrl}
+      >
+        <Content />
+      </ProjectModal>
+    );
+  })}
+
+  <!-- Industry Modals -->
+  {industry.map(async (item, i) => {
+    const { Content } = await item.render();
+    return (
+      <ProjectModal
+        id={`industry-${i}`}
+        title={`${item.data.title} - ${item.data.company}`}
+      >
+        <Content />
+      </ProjectModal>
+    );
+  })}
+
+  <!-- Teaching Modals -->
+  {teaching.map(async (item, i) => {
+    const { Content } = await item.render();
+    return (
+      <ProjectModal
+        id={`teaching-${i}`}
+        title={`${item.data.title} - ${item.data.course}`}
+      >
+        <Content />
+      </ProjectModal>
+    );
+  })}
+
+  <!-- Course Modals -->
+  {courses.filter(c => c.data.level === 'Graduate').map(async (course, i) => {
+    const { Content } = await course.render();
+    return (
+      <ProjectModal
+        id={`course-grad-${i}`}
+        title={course.data.title}
+      >
+        <Content />
+      </ProjectModal>
+    );
+  })}
+
+  {courses.filter(c => c.data.level === 'Undergraduate').map(async (course, i) => {
+    const { Content } = await course.render();
+    return (
+      <ProjectModal
+        id={`course-undergrad-${i}`}
+        title={course.data.title}
+      >
+        <Content />
+      </ProjectModal>
+    );
+  })}
+</Layout>
