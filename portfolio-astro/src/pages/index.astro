@@ -143,6 +143,7 @@ const teaching = (await getCollection('teaching'))
               modalId={`project-${i}`}
               buttonVariant="primary"
               statusVariant={statusVariant}
+              tags={project.data.tags}
             />
           );
         })}

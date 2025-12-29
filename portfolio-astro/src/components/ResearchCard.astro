@@ -24,11 +24,13 @@ const { title, image, date, topics, linkUrl, linkText, modalId } = Astro.props;
     </div>
     {topics && topics.length > 0 && (
       <div class="text-center mt-2">
-        {topics.map((topic, index) => {
-          const colors = ['bg-success', 'bg-danger', 'bg-secondary'];
+        {topics.length > 0 && <span class="badge bg-success text-white me-1">{topics[0]}</span>}
+        {topics.length > 1 && <span class="text-white mx-1">|</span>}
+        {topics.length > 1 && topics.slice(1).map((topic, index) => {
+          const colors = ['bg-danger', 'bg-info', 'bg-warning', 'bg-dark'];
           const colorClass = colors[index % colors.length];
           return (
-            <span class={`badge ${colorClass} me-1 mb-1`}>{topic}</span>
+            <span class={`badge ${colorClass} text-white me-1 mb-1`}>{topic}</span>
           );
         })}
       </div>
