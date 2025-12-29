@@ -6,7 +6,7 @@ status: "Class Final"
 description: "S.T.E.V.E. - Custom drone built for natural disaster relief"
 priority: 15
 videoUrl: "https://www.youtube.com/embed/2tt2pZ0hHJs"
-tags: ["Drone", "Arduino", "Raspberry Pi", "AI", "Computer Vision", "PID Control", "Embedded Systems"]
+tags: ["Drone", "Embedded Systems"]
 ---
 
 ## Overview

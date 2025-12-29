@@ -6,7 +6,7 @@ status: "Completed"
 description: "LC-4 OS: Operating System developed from scratch in a small group"
 priority: 7
 videoUrl: "https://www.youtube.com/watch?v=ARYjKrD7jYs"
-tags: ["Operating Systems", "C", "Assembly", "Systems Programming", "Class Project"]
+tags: ["OS", "Class Project"]
 ---
 
 ## Overview

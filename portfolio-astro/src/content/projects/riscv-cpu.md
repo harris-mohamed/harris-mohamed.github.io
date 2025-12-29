@@ -4,8 +4,8 @@ date: "2020-12-01"
 image: "risc.jpeg"
 status: "Completed"
 description: "Custom implementation of a pipelined RISC-V CPU"
-priority: 1
-tags: ["Computer Architecture", "RISC-V", "SystemVerilog", "Hardware Design", "Class Project", "CPU Design"]
+priority: 2
+tags: ["RISC-V", "FPGA", "CPU"]
 ---
 
 ## Overview

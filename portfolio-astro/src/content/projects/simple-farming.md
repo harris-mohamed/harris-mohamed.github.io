@@ -6,7 +6,7 @@ status: "Completed"
 description: "Basic automated farming implementation"
 priority: 10
 videoUrl: "https://www.youtube.com/watch?v=cHjv6lHhclM"
-tags: ["IoT", "Automation", "Agriculture", "Sensors", "Class Project"]
+tags: ["IoT", "Vertical Farming"]
 ---
 
 ## Overview

@@ -60,7 +60,7 @@ html {
 
 /* Page Sections */
 .page-section {
-  padding: 6rem 0;
+  padding: 3rem 0;
 }
 
 .page-section .page-section-heading {
@@ -353,4 +353,23 @@ html {
   display: block;
   margin-left: auto;
   margin-right: auto;
+}
+
+/* Modal Text Alignment */
+.portfolio-modal .modal-body p {
+  text-align: left;
+}
+
+.portfolio-modal .modal-body h1,
+.portfolio-modal .modal-body h2,
+.portfolio-modal .modal-body h3,
+.portfolio-modal .modal-body h4,
+.portfolio-modal .modal-body h5,
+.portfolio-modal .modal-body h6 {
+  text-align: center;
+}
+
+.portfolio-modal .modal-body ul,
+.portfolio-modal .modal-body ol {
+  text-align: left;
 }

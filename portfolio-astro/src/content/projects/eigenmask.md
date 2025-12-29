@@ -2,10 +2,10 @@
 title: "Eigenmask"
 date: "2020-05-01"
 image: "eigenmask.png"
-status: "Completed"
+status: "Class Final"
 description: "Eigenmask: A solution to detect if masks are being worn or not"
 priority: 3
-tags: ["Computer Vision", "Machine Learning", "Signal Processing", "Android", "Class Project", "Eigenfaces"]
+tags: ["Signal Processing", "Android"]
 ---
 
 ## Overview

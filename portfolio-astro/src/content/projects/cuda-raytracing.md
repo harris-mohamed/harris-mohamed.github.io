@@ -2,11 +2,11 @@
 title: "CUDA Ray Tracing: GPU-accelerated ray tracing renderer"
 date: "2019-12-01"
 image: "cuda.jpg"
-status: "Class Final - Completed"
+status: "Class Final"
 description: "High-performance ray tracing renderer implemented in CUDA for ECE 408."
 priority: 8
 githubUrl: "https://github.com/harris-mohamed/cuda-raytracing"
-tags: ["CUDA", "Graphics", "GPU"]
+tags: ["CUDA", "GPU"]
 ---
 
 ## Project Description

@@ -2,11 +2,11 @@
 title: "Project LD"
 date: "2018-12-01"
 image: "ld.png"
-status: "Completed"
+status: "Class Final"
 description: "Project LD: FPGA-based 2D Object Tracker"
 priority: 12
 videoUrl: "https://www.youtube.com/embed/chocc--7Fws"
-tags: ["FPGA", "Computer Vision", "Real-time Processing", "Object Tracking", "Class Project"]
+tags: ["FPGA", "Computer Vision"]
 ---
 
 ## Overview
