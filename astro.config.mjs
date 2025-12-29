@@ -5,4 +5,5 @@ import { defineConfig } from 'astro/config';
 export default defineConfig({
   site: 'https://harris-mohamed.github.io',
   base: '/',
+  output: 'static',
 });
