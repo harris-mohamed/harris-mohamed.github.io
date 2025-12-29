@@ -4,202 +4,182 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-This is a static personal portfolio website for Harris Mohamed, hosted on GitHub Pages. The site showcases academic research, personal projects, industry experience, teaching experience, and relevant coursework. It is built using HTML, CSS (Bootstrap-based), and JavaScript (jQuery-based).
+This is a personal portfolio website for Harris Mohamed, built with **Astro** and hosted on GitHub Pages. The site showcases academic research, personal projects, industry experience, teaching experience, and relevant coursework.
 
 ## Technology Stack
 
-- **Frontend Framework**: Bootstrap 4.5.3 with Start Bootstrap Freelancer theme v6.0.5
-- **JavaScript Libraries**:
-  - jQuery 3.5.1
-  - jQuery Easing 1.4.1
-  - Bootstrap validation (jqBootstrapValidation.js)
-- **CSS**: Custom styles in `css/styles.css` built on Bootstrap
-- **Icons**: Font Awesome 5.15.1
-- **Analytics**: Google Analytics (UA-140232502-1)
+- **Framework**: Astro v5.16.5 (static site generator)
+- **UI Framework**: Bootstrap 5 with custom theming
+- **Content Management**: Astro Content Collections (TypeScript-based)
+- **Styling**: Custom CSS in `public/styles/global.css`
+- **Icons**: Font Awesome 6
+- **Package Manager**: npm
 
 ## File Structure
 
 ```
 .
-├── index.html              # Main single-page application (2986 lines)
-├── css/
-│   └── styles.css          # Bootstrap-based custom styling
-├── js/
-│   └── scripts.js          # jQuery interactions and smooth scrolling
-├── images/                 # Portfolio images, project screenshots, headshots
-├── assets/
-│   ├── img/               # Additional image assets
-│   └── mail/              # Contact form JavaScript and PHP
-│       ├── contact_me.js
-│       ├── contact_me.php
-│       └── jqBootstrapValidation.js
-└── .git/
+├── src/
+│   ├── pages/
+│   │   └── index.astro           # Main page with all sections
+│   ├── components/
+│   │   ├── Layout.astro          # Base layout with head/scripts
+│   │   ├── ProjectCard.astro     # Card component for projects
+│   │   ├── ResearchCard.astro    # Card component for research
+│   │   ├── IndustryCard.astro    # Card component for industry experience
+│   │   ├── TeachingCard.astro    # Card component for teaching experience
+│   │   ├── CourseCard.astro      # Card component for courses
+│   │   └── ProjectModal.astro    # Modal component for details
+│   └── content/
+│       ├── config.ts             # Content collection schemas
+│       ├── projects/             # Project markdown files
+│       ├── research/             # Research markdown files
+│       ├── industry/             # Industry experience markdown files
+│       ├── teaching/             # Teaching experience markdown files
+│       └── courses/              # Course markdown files
+├── public/
+│   ├── images/                   # All images (projects, research, headshot, etc.)
+│   ├── documents/                # PDF files (resume, etc.)
+│   └── styles/
+│       └── global.css            # Global CSS styles
+├── .claude/
+│   └── commands/                 # Custom Claude Code slash commands
+├── astro.config.mjs              # Astro configuration
+├── package.json                  # Node dependencies
+├── tsconfig.json                 # TypeScript configuration
+└── CLAUDE.md                     # This file
 ```
 
 ## Architecture
 
-### Single-Page Application Structure
+### Content Collections
 
-The website is a single-page application (`index.html`) with the following main sections:
+The site uses Astro's Content Collections API to manage all portfolio content. Each collection is defined in `src/content/config.ts` with TypeScript schemas:
 
-1. **Navigation** (`#mainNav`): Fixed top navbar with smooth scroll triggers
-2. **Masthead/Header**: Hero section with profile image and bio
-3. **About Section** (`#about`): Personal introduction and social links
-4. **Research Section** (`#research`): Academic publications and conference presentations
-5. **Projects Section** (`#projects`): Personal technical projects
-6. **Industry Section** (`#industry`): Professional work experience
-7. **Teaching Section** (`#teaching`): Teaching assistant and course-related experience
-8. **Coursework Section** (`#coursework`): Relevant academic courses
-9. **Footer**: Social media links and copyright
+- **projects**: Personal technical projects (priority, status, tags, GitHub/video URLs)
+- **research**: Academic research and conference presentations (date, topics, publication links)
+- **industry**: Professional work experience (company, title, dates)
+- **teaching**: Teaching assistant experiences (course, dates)
+- **courses**: Relevant academic coursework (level: Graduate/Undergraduate)
 
-### Modal System
+All content is stored as Markdown files with YAML frontmatter.
 
-The site uses **Bootstrap modals extensively** (48 modals total) to display detailed information about:
-- Research papers and conference presentations
-- Personal projects (e.g., vertical farming, CUDA implementations, FPGA designs)
-- Industry positions (Kratos, NVIDIA, Continental, Weber Grills)
-- Teaching experiences
-- Individual courses
+### Page Sections
 
-Each modal follows the pattern:
-```html
-<div class="portfolio-modal modal fade" id="[name]Modal">
-  <!-- Modal content with project/research details -->
-</div>
-```
+The main page (`src/pages/index.astro`) includes:
 
-### JavaScript Functionality
+1. **Navigation**: Fixed top navbar with scroll-to-section links
+2. **Masthead**: Hero section with headshot and bio
+3. **About**: Personal introduction and social links
+4. **Research**: Academic publications and conference presentations
+5. **Projects**: Personal technical projects with status badges
+6. **Industry**: Professional work experience
+7. **Resume**: Embedded PDF viewer with download option
+8. **Teaching**: Teaching assistant experiences
+9. **Coursework**: Graduate and undergraduate courses (separate sections)
+10. **Footer**: Social media links and copyright
 
-**`js/scripts.js`** handles:
-- Smooth scrolling to anchor sections using jQuery easing
-- Navbar collapse on mobile
-- Navbar shrink effect on scroll
-- Scrollspy for active navigation highlighting
-- Modal hash routing: Opens specific modals based on URL hash (e.g., `#sentinelModal`)
-  - Array of 30+ modal IDs checked on page load
-  - If URL contains modal hash, automatically opens that modal
+### Component System
 
-**Navigation behavior**:
-- All internal links use `.js-scroll-trigger` class for smooth scrolling
-- Offset of 71px/80px to account for fixed navbar height
+**Cards**: Each content type has a dedicated card component that displays in a responsive grid
+**Modals**: Bootstrap 5 modals display full details when clicking "Click for details"
+- Modals render markdown content from content collections
+- Support for GitHub links, video links, and publication links
+- Centered headers, left-justified paragraphs
+
+### Styling
+
+- Color theme: Mint/teal primary (`#1abc9c`), dark slate secondary (`#2c3e50`)
+- Section padding: `3rem` top/bottom
+- Responsive grid layout using Bootstrap columns
+- Custom badge colors for project status (success, danger, dark)
+- Modal text alignment: headers centered, paragraphs left-justified
 
 ## Development Workflow
 
 ### Local Development
 
-This is a static site with no build process. To develop:
+```bash
+# Install dependencies (first time only)
+npm install
 
-1. **Open the site**: Simply open `index.html` in a browser or use a local web server:
-   ```bash
-   python -m http.server 8000
-   # or
-   python3 -m http.server 8000
-   ```
-   Then navigate to `http://localhost:8000`
+# Start dev server (with hot reload)
+npm run dev
+# Site runs at http://localhost:4321/
 
-2. **Live reload** (optional): Use any static file server with live reload:
-   ```bash
-   # If you have Node.js installed:
-   npx http-server -p 8000
-   # or with live-server:
-   npx live-server
-   ```
+# Build for production
+npm run build
+
+# Preview production build
+npm run preview
+```
+
+### Adding New Content
+
+Use the custom Claude Code slash commands:
+
+- `/add-research` - Create new research publication
+- `/add-project` - Create new project
+- `/add-industry` - Create new industry experience
+- `/add-course` - Create new course
+
+Or manually create markdown files in `src/content/{collection}/` following the schema in `src/content/config.ts`.
+
+**After adding content:**
+1. Ensure images exist in `public/images/`
+2. Fill in markdown content sections
+3. Preview with `npm run dev`
+4. Commit and push changes
 
 ### Deployment
 
-This site is hosted on **GitHub Pages**. To deploy:
+This site is hosted on **GitHub Pages**:
 
 1. Commit changes to the repository
-2. Push to the appropriate branch (likely `master` or `main`)
-3. GitHub Pages will automatically serve the updated site
+2. Push to the main branch
+3. GitHub Pages will automatically build and deploy
 
 Current git branches:
-- Working branch: `release/redesign`
+- Development branch: `dev/astro-claude-attempt`
 - Main branch: `master`
-
-### Making Changes
-
-When editing content:
-
-1. **Adding new projects/research**:
-   - Add portfolio item in the appropriate section (research/projects/industry)
-   - Create corresponding modal with unique ID at the bottom of `index.html`
-   - Add modal ID to the `modals` array in `js/scripts.js` if you want hash routing support
-
-2. **Updating styling**: Edit `css/styles.css`
-
-3. **Modifying behavior**: Edit `js/scripts.js` (jQuery-based)
-
-4. **Adding images**: Place in `images/` directory and reference in HTML
-
-## Important Notes
-
-- **No build step required** - this is a static HTML site
-- **jQuery dependency** - all JavaScript uses jQuery; maintain jQuery patterns when adding features
-- **Bootstrap modals** - the primary interaction pattern; familiarize yourself with Bootstrap 4 modal API
-- **Long HTML file** - `index.html` is 2986 lines; use search/grep to find specific sections
-- **Contact form** - Currently commented out in HTML; uses PHP backend (`assets/mail/contact_me.php`)
-- **Google Analytics** - Integrated tracking code at bottom of HTML
-- **External CDNs** - Site depends on external CDN resources (jQuery, Bootstrap, Font Awesome)
-- **Resume link** - External Google Drive link in navigation (line 36)
-
-## Content Sections
-
-The website highlights Harris Mohamed's work in:
-- **Space Domain Awareness (SDA)**: RF data analysis, satellite tracking, pattern-of-life analysis (Kratos Defense)
-- **FPGA Development**: Real-time LIDAR classification (Sentinel/Sentinel Prime projects)
-- **Computer Vision & AI/ML**: Various research and personal projects
-- **Hardware Acceleration**: CUDA, FPGA implementations
-- **Embedded Systems**: IoT, vertical farming automation
 
 ## Common Tasks
 
-**Update personal information**: Edit the About section starting at line 62
+**Update personal info**: Edit the About section in `src/pages/index.astro` (line 71-78)
 
-**Add new research publication**: Add portfolio item in Research section (line 107+) and create modal
+**Add new project**: Use `/add-project` command or create file in `src/content/projects/`
 
-**Modify navigation**: Edit navbar section (line 21-40)
+**Add new research**: Use `/add-research` command or create file in `src/content/research/`
 
-**Update social links**: Edit footer social icons (line 86-89)
+**Update styling**: Edit `public/styles/global.css`
 
-**Change color scheme**: Modify Bootstrap variables in `css/styles.css`
+**Change section spacing**: Modify `.page-section` padding in global.css (currently 3rem)
 
-## Content Scaffolding Commands (Astro Site)
+**Update resume**: Replace `public/documents/resume.pdf`
 
-The repository includes custom Claude Code slash commands to quickly scaffold new content entries for the **Astro-based portfolio** (`portfolio-astro/`):
+**Add images**: Place in `public/images/` and reference in markdown frontmatter
 
-### Available Commands
+**Modify component layout**: Edit components in `src/components/`
 
-- **`/add-research`** - Create new research publication entry
-  - Prompts for: title, date, image, topics, links, advisor info
-  - Creates: `portfolio-astro/src/content/research/{title-kebab}.md`
+## Important Notes
 
-- **`/add-project`** - Create new personal project entry
-  - Prompts for: title, description, date, priority, image, status, URLs, tags
-  - Creates: `portfolio-astro/src/content/projects/{title-kebab}.md`
+- **TypeScript**: Astro uses TypeScript for type-safe content schemas
+- **No runtime JavaScript**: Astro generates static HTML (islands architecture not used here)
+- **Content validation**: Frontmatter is validated against schemas in `config.ts`
+- **Hot reloading**: Dev server automatically reloads on file changes
+- **Image optimization**: Images are served as-is from `public/` (consider optimization)
+- **Bootstrap 5**: Modern Bootstrap version with data-bs-* attributes
+- **Font Awesome**: Icon library loaded via CDN
 
-- **`/add-industry`** - Create new industry experience entry
-  - Prompts for: job title, company, dates, image
-  - Creates: `portfolio-astro/src/content/industry/{company}-{role}-{year}.md`
+## Content Focus
 
-- **`/add-course`** - Create new academic course entry
-  - Prompts for: course title, level (Graduate/Undergraduate), description, image
-  - Creates: `portfolio-astro/src/content/courses/{course-code}-{short-name}.md`
+Harris Mohamed's portfolio highlights:
+- **Space Domain Awareness (SDA)**: RF data analysis, satellite tracking, EMI detection (Kratos Defense)
+- **FPGA Development**: Real-time LIDAR classification (Sentinel/Sentinel Prime projects)
+- **Computer Vision & AI/ML**: Research and personal projects
+- **Hardware Acceleration**: CUDA, FPGA implementations
+- **Embedded Systems**: IoT, vertical farming automation
 
-### Command Usage
+## Custom Commands
 
-All commands use **interactive prompts** to gather required information and generate properly formatted markdown files with:
-- Valid YAML frontmatter matching content schemas
-- Placeholder content sections to fill in
-- Helpful confirmation messages and next steps
-
-For detailed documentation, see: `.claude/commands/README.md`
-
-### Workflow After Adding Content
-
-1. Verify image exists in `portfolio-astro/public/images/`
-2. Edit generated markdown file to fill in placeholder sections
-3. Run `npm run dev` in `portfolio-astro/` to preview changes
-4. Commit and push the new content file to git
-
-These commands work with the **Astro site only** (`portfolio-astro/`), not the legacy HTML site (`index.html`).
+See `.claude/commands/README.md` for detailed documentation on slash commands for content scaffolding.
