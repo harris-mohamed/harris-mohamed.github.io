@@ -8,4 +8,4 @@ dates: "Summer 2021"
 
 ## Overview
 
-I will be a computer architecture intern this summer. This page will be updated after I have completed my internship!
+I worked on a GPU simulator written in C++, profiling the simulator using Visual Studio and optimizing the simulator to perform more efficiently. 
