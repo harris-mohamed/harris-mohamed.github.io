@@ -33,13 +33,13 @@ const { title = 'Harris Mohamed - Portfolio' } = Astro.props;
   <slot />
 
   <!-- jQuery -->
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script is:inline src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
   <!-- Bootstrap 5 Bundle (includes Popper) -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script is:inline src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
 
   <!-- Custom Scripts -->
-  <script>
+  <script is:inline>
     // Smooth scrolling for anchor links
     $(document).ready(function() {
       $('a.js-scroll-trigger[href*="#"]:not([href="#"])').click(function() {
