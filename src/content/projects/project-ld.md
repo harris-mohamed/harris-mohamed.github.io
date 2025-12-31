@@ -1,7 +1,7 @@
 ---
 title: "Project LD"
 date: "2018-12-01"
-image: "ld.png"
+image: "../../../public/images/ld.png"
 status: "Class Final"
 description: "Project LD: FPGA-based 2D Object Tracker"
 priority: 12

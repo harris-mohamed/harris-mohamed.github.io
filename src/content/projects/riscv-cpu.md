@@ -1,7 +1,7 @@
 ---
 title: "Custom Pipelined RISC-V Implementation"
 date: "2020-12-01"
-image: "risc.jpeg"
+image: "../../../public/images/risc.jpeg"
 status: "Completed"
 description: "Custom implementation of a pipelined RISC-V CPU"
 priority: 2

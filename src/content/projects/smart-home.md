@@ -1,7 +1,7 @@
 ---
 title: "Smart Home"
 date: "2021-01-01"
-image: "atlas.png"
+image: "../../../public/images/atlas.png"
 status: "In progress"
 description: "Smart Home automation project"
 priority: 0

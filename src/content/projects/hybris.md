@@ -1,7 +1,7 @@
 ---
 title: "Project Hybris"
 date: "2020-03-01"
-image: "OpenAI.jpg"
+image: "../../../public/images/OpenAI.jpg"
 status: "Completed"
 description: "Hybris: An experiment in text generation"
 priority: 4

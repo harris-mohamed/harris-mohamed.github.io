@@ -1,7 +1,10 @@
 ---
+import { Image } from 'astro:assets';
+import type { ImageMetadata } from 'astro';
+
 interface Props {
   title: string;
-  image: string;
+  image: ImageMetadata;
   modalId: string;
   level: string;
   levelVariant?: string;
@@ -18,7 +21,7 @@ const { title, image, modalId, level, levelVariant = 'info' } = Astro.props;
           <i class="fas fa-plus fa-3x"></i>
         </div>
       </div>
-      <img class="img-fluid" src={`/images/${image}`} alt={title} style="border: 3px solid #1abc9c;" />
+      <Image src={image} alt={title} class="img-fluid" style="border: 3px solid #1abc9c;" width={600} height={400} />
     </div>
     <div class="text-center mt-2">
       <span class={`badge bg-${levelVariant}`}>{level}</span>

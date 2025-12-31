@@ -1,7 +1,7 @@
 ---
 title: "OCR & Dyslexia"
 date: "2018-04-01"
-image: "test2.jpg"
+image: "../../../public/images/test2.jpg"
 status: "Hackathon winner"
 description: "OCR & Dyslexia assistive technology"
 priority: 14

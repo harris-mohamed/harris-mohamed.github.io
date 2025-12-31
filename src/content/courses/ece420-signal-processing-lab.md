@@ -1,7 +1,7 @@
 ---
 title: "ECE 420 - Signal Processing Lab"
 level: "Undergraduate"
-image: "420.jpg"
+image: "../../../public/images/420.jpg"
 description: "Developed Android applications to apply real-time signal processing techniques"
 ---
 

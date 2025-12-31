@@ -1,7 +1,7 @@
 ---
 title: "Eigenmask"
 date: "2020-05-01"
-image: "eigenmask.png"
+image: "../../../public/images/eigenmask.png"
 status: "Class Final"
 description: "Eigenmask: A solution to detect if masks are being worn or not"
 priority: 3
