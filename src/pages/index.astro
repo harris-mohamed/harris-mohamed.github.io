@@ -1,4 +1,5 @@
 ---
+import { Image } from 'astro:assets';
 import Layout from '../components/Layout.astro';
 import ProjectCard from '../components/ProjectCard.astro';
 import ResearchCard from '../components/ResearchCard.astro';
@@ -7,6 +8,7 @@ import TeachingCard from '../components/TeachingCard.astro';
 import CourseCard from '../components/CourseCard.astro';
 import ProjectModal from '../components/ProjectModal.astro';
 import { getCollection } from 'astro:content';
+import headshot from '../assets/headshot.jpg';
 
 const projects = (await getCollection('projects'))
   .sort((a, b) => a.data.priority - b.data.priority);
@@ -45,7 +47,7 @@ const teaching = (await getCollection('teaching'))
   <!-- Masthead -->
   <header class="masthead bg-primary text-white text-center">
     <div class="container d-flex align-items-center flex-column">
-      <img class="masthead-avatar mb-5 rounded-circle object-fit-cover aspect-ratio-square" src="/images/headshot.jpg" alt="Harris Mohamed" />
+      <Image src={headshot} alt="Harris Mohamed" class="masthead-avatar mb-5 rounded-circle object-fit-cover aspect-ratio-square" width={300} height={300} />
       <h1 class="masthead-heading text-uppercase mb-0">Harris Mohamed</h1>
       <div class="divider-custom divider-light">
         <div class="divider-custom-line"></div>
