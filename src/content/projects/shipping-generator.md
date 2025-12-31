@@ -1,7 +1,7 @@
 ---
 title: "Shipping Generator"
 date: "2016-01-01"
-image: "test3.jpg"
+image: "../../../public/images/test3.jpg"
 status: "Completed"
 description: "Shipping Generator web application"
 priority: 16

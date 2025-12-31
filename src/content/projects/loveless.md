@@ -1,7 +1,7 @@
 ---
 title: "Project Loveless"
 date: "2020-06-01"
-image: "ye.jpg"
+image: "../../../public/images/ye.jpg"
 status: "Abandoned"
 description: "Project Loveless: An experiment in understanding text messages"
 priority: 2

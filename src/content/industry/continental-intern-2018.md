@@ -2,7 +2,7 @@
 title: "Embedded Software Intern"
 date: "2018-06-01"
 company: "Continental Automotive"
-image: "continental.png"
+image: "../../../public/images/continental.png"
 dates: "Summer 2018"
 ---
 

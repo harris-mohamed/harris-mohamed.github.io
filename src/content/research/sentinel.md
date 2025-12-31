@@ -1,7 +1,7 @@
 ---
 title: "Sentinel: Real-time LIDAR Classification System"
 date: "2022-01-01"
-image: "Sentinel.jpg"
+image: "../../../public/images/Sentinel.jpg"
 ---
 
 ## Project Overview

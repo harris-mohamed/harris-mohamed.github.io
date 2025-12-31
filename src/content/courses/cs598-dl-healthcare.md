@@ -1,7 +1,7 @@
 ---
 title: "CS 598 - Deep Learning for Healthcare"
 level: "Graduate"
-image: "448.jpg"
+image: "../../../public/images/448.jpg"
 description: "Deep learning fundamentals including CNNs, RNNs, ResNet, Transformers, and Graph Neural Networks"
 ---
 

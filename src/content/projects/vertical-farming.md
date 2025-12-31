@@ -1,7 +1,7 @@
 ---
 title: "Vertical Farming"
 date: "2020-01-01"
-image: "simple-automated-farming.png"
+image: "../../../public/images/simple-automated-farming.png"
 status: "In Progress"
 description: "Scaling automated farming technology to vertical farming for global food distribution and production."
 priority: 1

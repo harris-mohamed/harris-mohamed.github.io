@@ -3,7 +3,7 @@ title: "Artificial Intelligence Engineer"
 company: "Kratos Defense & Security Solutions"
 dates: "2025 - Present"
 date: "2025-10-20"
-image: "kratos.png"
+image: "../../../public/images/kratos.png"
 ---
 
 ## Role Overview

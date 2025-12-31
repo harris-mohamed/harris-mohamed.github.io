@@ -1,10 +1,10 @@
-import { defineCollection, z } from 'astro:content';
+import { defineCollection, z, image } from 'astro:content';
 
 const projects = defineCollection({
   type: 'content',
-  schema: z.object({
+  schema: ({ image }) => z.object({
     title: z.string(),
-    image: z.string(),
+    image: image(),
     status: z.string().optional(),
     description: z.string(),
     date: z.string(),
@@ -17,9 +17,9 @@ const projects = defineCollection({
 
 const research = defineCollection({
   type: 'content',
-  schema: z.object({
+  schema: ({ image }) => z.object({
     title: z.string(),
-    image: z.string(),
+    image: image(),
     date: z.string(),
     topics: z.array(z.string()).optional(),
     linkUrl: z.string().url().optional(),
@@ -31,20 +31,20 @@ const research = defineCollection({
 
 const courses = defineCollection({
   type: 'content',
-  schema: z.object({
+  schema: ({ image }) => z.object({
     title: z.string(),
     level: z.enum(['Graduate', 'Undergraduate']),
-    image: z.string(),
+    image: image(),
     description: z.string(),
   }),
 });
 
 const industry = defineCollection({
   type: 'content',
-  schema: z.object({
+  schema: ({ image }) => z.object({
     title: z.string(),
     company: z.string(),
-    image: z.string(),
+    image: image(),
     dates: z.string(),
     date: z.string(),
   }),
@@ -52,10 +52,10 @@ const industry = defineCollection({
 
 const teaching = defineCollection({
   type: 'content',
-  schema: z.object({
+  schema: ({ image }) => z.object({
     title: z.string(),
     course: z.string(),
-    image: z.string(),
+    image: image(),
     dates: z.string(),
     date: z.string(),
   }),

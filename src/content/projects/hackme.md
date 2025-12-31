@@ -1,7 +1,7 @@
 ---
 title: "HackMe: Hackathon-winning proof of concept noninvasive EEG wave capture"
 date: "2019-02-01"
-image: "hack_group.jpg"
+image: "../../../public/images/hack_group.jpg"
 status: "Hackathon winner"
 description: "Won multiple awards at HackIllinois 2019 for noninvasive EEG wave capture and thought mapping."
 priority: 11
