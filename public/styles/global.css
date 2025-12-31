@@ -244,6 +244,8 @@ html {
 
 .masthead .masthead-avatar {
   width: 15rem;
+  height: 15rem;
+  object-fit: cover;
 }
 
 @media (min-width: 992px) {
