@@ -4,7 +4,7 @@ date: "2021-01-01"
 image: "../../../public/images/atlas.png"
 status: "In progress"
 description: "Smart Home automation project"
-priority: 0
+priority: 1
 tags: ["LLM", "n8n"]
 ---
 
