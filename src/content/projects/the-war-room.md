@@ -3,7 +3,7 @@ title: "The War Room"
 description: "A multi-LLM interface enabling simultaneous queries to multiple AI models to obtain diversified opinions and perspectives"
 date: "2026-01-25"
 priority: 0
-image: "war_room_demo.png"
+image: "../../../public/images/war_room_demo.png"
 status: "In Progress"
 githubUrl: "https://github.com/harris-mohamed/war-room"
 tags: ["AI/ML", "LLM", "Full Stack"]
