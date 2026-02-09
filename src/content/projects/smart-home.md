@@ -1,13 +1,13 @@
 ---
-title: "Smart Home"
-date: "2021-01-01"
+title: "Atlas"
+date: "2026-02-09"
 image: "../../../public/images/atlas.png"
 status: "In progress"
-description: "Smart Home automation project"
-priority: 1
-tags: ["LLM", "n8n"]
+description: "LLM Council for deep research"
+priority: 0
+tags: ["LLM", "Discord", "AI Council"]
 ---
 
 ## Overview
 
-Atlas is a digital secretary designed to make my life easier. Current goals are to help with email, calendar, and lean project management for my many ongoing efforts. The first take of this controls the assistant using a private discord server that connects to an n8n instance to execute workflows. 
+Atlas is a Discord-based AI council system where multiple LLM officers collaborate to strategize, brainstorm, and evaluate ideas. Right now, Atlas can spawn officers with multiple personalities to answer questions and conduct basic research on tasks. I want to grow this out to have the officers able to implement simple POCs using headless Claude Codes.
